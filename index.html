@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talleres Mateo 2.0 — Mecánica &amp; Electricidad</title>
+<style>/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* cyrillic */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* latin */
+
+</style>
+<script src="js/main.js"></script>
+<style>
+  *, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --orange:#f24300; --orange-dark:#c73800; --yellow:#ffcf00;
+    --blue:#0a2463; --blue-mid:#1a3a7a; --blue-light:#e8eef8;
+    --black:#000; --black-mid:#141414; --black-card:#1a1a1a;
+    --white:#fff; --gray:#888;
+  }
+  html { scroll-behavior:smooth; }
+  body { background:var(--black); color:var(--white); font-family:Barlow,sans-serif; overflow-x:hidden; }
+
+  /* ============ NAV ============ */
+  .nav-wrap { position:fixed; top:0; left:0; right:0; z-index:100; transition:transform .35s ease; }
+  .nav-utility { background:#0a0a0a; border-bottom:1px solid #ffffff0a; padding:.35rem 3rem; display:flex; justify-content:space-between; align-items:center; gap:1.5rem; font-family:'Barlow Condensed',sans-serif; font-size:11.5px; letter-spacing:1.5px; text-transform:uppercase; color:#ffffff80; }
+  .nav-utility-left, .nav-utility-right { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+  .nav-util-item { display:inline-flex; align-items:center; gap:.45rem; text-decoration:none; color:inherit; transition:color .2s; }
+  .nav-util-item:hover { color:var(--orange); }
+  .nav-util-item svg { width:13px; height:13px; flex-shrink:0; }
+  .nav-util-item strong { color:#fff; font-weight:700; letter-spacing:1.5px; }
+  .nav-util-sep { width:1px; height:14px; background:#ffffff1a; }
+  .nav-util-social { display:flex; align-items:center; gap:.5rem; }
+  .nav-util-social a { width:24px; height:24px; border-radius:50%; background:#ffffff0d; border:1px solid #ffffff14; display:flex; align-items:center; justify-content:center; color:#ffffff99; transition:all .2s; }
+  .nav-util-social a:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+  .nav-util-social svg { width:11px; height:11px; }
+
+  nav { justify-content:space-between; align-items:center; padding:.5rem 3rem; transition:background .35s, backdrop-filter .35s, padding .25s; display:flex; background:#0000004d; backdrop-filter:blur(8px); border-bottom:1px solid #ffffff0a; }
+  nav.scrolled { backdrop-filter:blur(14px); background:#000000eb; border-bottom:1px solid #f2430040; padding:.4rem 3rem; }
+  .nav-wrap.hide-util .nav-utility { transform:translateY(-100%); height:0; padding-top:0; padding-bottom:0; overflow:hidden; opacity:0; transition:all .3s ease; }
+  .nav-brand { align-items:center; gap:.6rem; text-decoration:none; display:flex; }
+  .nav-logo-img { height:50px; width:auto; display:block; filter:drop-shadow(0 4px 16px #00000080); transition:height .25s; }
+  nav.scrolled .nav-logo-img { height:42px; }
+  .footer-brand .nav-logo-img { height:70px; filter:none; }
+  .nav-logo-badge { clip-path:polygon(8% 0%, 92% 0%, 100% 50%, 92% 100%, 8% 100%, 0% 50%); background:var(--orange); letter-spacing:1px; width:42px; height:34px; color:var(--white); text-align:center; flex-shrink:0; justify-content:center; align-items:center; font-family:'Bebas Neue',sans-serif; font-size:11px; line-height:1.1; display:flex; }
+  .nav-brand-text { flex-direction:column; line-height:1; display:flex; }
+  .nav-brand-top { letter-spacing:3px; color:var(--orange); text-transform:uppercase; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:600; }
+  .nav-brand-main { color:var(--white); font-family:'Satisfy',cursive; font-size:20px; }
+  .nav-brand-main span { color:var(--orange); }
+  .nav-links { gap:2.2rem; list-style:none; display:flex; align-items:center; }
+  .nav-links a { letter-spacing:2.5px; text-transform:uppercase; color:#ffffffbf; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:600; text-decoration:none; transition:color .2s; position:relative; padding:.4rem 0; }
+  .nav-links a:after { content:""; background:var(--orange); transform-origin:50% 50%; height:2px; width:100%; transition:transform .3s cubic-bezier(.65,0,.35,1); position:absolute; bottom:-2px; left:0; transform:scaleX(0); }
+  .nav-links a:hover, .nav-links a.active { color:var(--white); }
+  .nav-links a:hover:after, .nav-links a.active:after { transform:scaleX(1); }
+  .nav-cta { letter-spacing:2.5px; text-transform:uppercase; background:var(--orange); color:var(--white); cursor:pointer; border:2px solid var(--orange); border-radius:3px; padding:.55rem 1.2rem; font-family:'Barlow Condensed',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; transition:background .2s, transform .15s, box-shadow .2s; display:inline-flex; align-items:center; gap:.45rem; box-shadow:0 4px 14px #f2430059; }
+  .nav-cta:hover { background:var(--orange-dark); border-color:var(--orange-dark); transform:translateY(-1px); box-shadow:0 6px 20px #f2430080; }
+  .nav-cta svg { width:14px; height:14px; }
+
+  .hamburger { cursor:pointer; background:0 0; border:none; flex-direction:column; gap:5px; padding:4px; display:none; }
+  .hamburger span { background:var(--white); border-radius:1px; width:26px; height:2px; transition:all .3s; display:block; }
+  .mobile-menu { z-index:99; background:#000000f7; flex-direction:column; justify-content:center; align-items:center; gap:2rem; display:none; position:fixed; inset:0; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { letter-spacing:4px; color:var(--white); font-family:'Bebas Neue',sans-serif; font-size:2.5rem; text-decoration:none; transition:color .2s; }
+  .mobile-menu a:hover { color:var(--orange); }
+  .mobile-close { color:var(--white); cursor:pointer; background:0 0; border:none; font-size:2rem; line-height:1; position:absolute; top:1.5rem; right:2rem; }
+
+  /* ============ HERO ============ */
+  .hero { flex-direction:column; height:100vh; min-height:640px; padding-top:110px; display:flex; position:relative; overflow:hidden; }
+  .hero-bg { background:var(--black); position:absolute; inset:0; overflow:hidden; }
+  .hero-bg:before { content:""; background:repeating-linear-gradient(105deg, #0000, #0000 120px, #f2430008 120px 122px); animation:3s linear infinite speedlines; position:absolute; inset:0; }
+  @keyframes speedlines { 0% { transform:translate(-200px); } to { transform:translate(0); } }
+  .hero-photo { position:absolute; inset:0; opacity:.55; }
+  .hero-photo image-slot { width:100%; height:100%; --is-bg:transparent; --is-border:0; --is-radius:0; }
+  .hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.65; z-index:0; pointer-events:none; }
+  .hero-grid { background-image:linear-gradient(#f243000f 1px, #0000 1px), linear-gradient(90deg, #f243000f 1px, #0000 1px); background-size:60px 60px; position:absolute; inset:0; mask-image:radial-gradient(#000 0%, #0000 75%); }
+  .hero-glow { pointer-events:none; background:radial-gradient(#f243002e 0%, #0000 70%); width:700px; height:300px; position:absolute; bottom:-100px; left:50%; transform:translate(-50%); }
+  .hero-checker { background:repeating-linear-gradient(90deg, var(--orange) 0px, var(--orange) 8px, transparent 8px, transparent 16px); height:4px; position:absolute; bottom:0; left:0; right:0; }
+  .hero-overlay { background:linear-gradient(90deg, #000000ad 0%, #0006 55%, #0003 100%); position:absolute; inset:0; }
+  .hero-content { z-index:2; flex:1; align-items:center; padding:0 3rem; display:flex; position:relative; }
+  .hero-inner { max-width:780px; }
+  .hero-eyebrow { letter-spacing:5px; text-transform:uppercase; color:var(--orange); opacity:0; align-items:center; gap:.75rem; margin-bottom:1rem; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; animation:.7s .1s forwards fadeUp; display:flex; }
+  .hero-eyebrow:before { content:""; background:var(--orange); width:30px; height:2px; display:block; }
+  .hero-heading { opacity:0; margin-bottom:1.5rem; line-height:.9; animation:.7s .3s forwards fadeUp; }
+  .hero-line1 { color:#ffffff38; letter-spacing:3px; font-family:'Bebas Neue',sans-serif; font-size:clamp(5rem, 12vw, 9rem); display:block; }
+  .hero-line2 { color:var(--white); letter-spacing:3px; margin-top:-.15em; font-family:'Bebas Neue',sans-serif; font-size:clamp(5rem, 12vw, 9rem); display:block; }
+  .hero-line2 .accent { color:var(--orange); }
+  .hero-subtitle { color:#ffffffb3; opacity:0; max-width:480px; margin-bottom:2.5rem; font-family:Barlow,sans-serif; font-size:clamp(1rem, 2vw, 1.2rem); font-weight:300; line-height:1.6; animation:.7s .5s forwards fadeUp; }
+  .hero-buttons { opacity:0; flex-wrap:wrap; gap:1rem; animation:.7s .65s forwards fadeUp; display:flex; }
+
+  .btn-primary { letter-spacing:2.5px; text-transform:uppercase; background:var(--orange); color:var(--white); border:2px solid var(--orange); cursor:pointer; border-radius:2px; align-items:center; gap:.5rem; padding:.9rem 2.2rem; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; text-decoration:none; transition:all .2s; display:inline-flex; }
+  .btn-primary:hover { background:var(--orange-dark); border-color:var(--orange-dark); transform:translateY(-2px); }
+  .btn-secondary { letter-spacing:2.5px; text-transform:uppercase; color:var(--white); cursor:pointer; background:0 0; border:2px solid #fff6; border-radius:2px; align-items:center; gap:.5rem; padding:.9rem 2.2rem; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; text-decoration:none; transition:all .2s; display:inline-flex; }
+  .btn-secondary:hover { border-color:var(--white); transform:translateY(-2px); }
+
+  .hero-badge { z-index:2; opacity:0; backdrop-filter:blur(8px); background:#141414e6; border:1px solid #f2430059; border-radius:4px; align-items:center; gap:.8rem; padding:1rem 1.4rem; animation:.7s .8s forwards fadeUp; display:flex; position:absolute; bottom:6rem; right:3rem; }
+  .badge-stars { color:var(--yellow); letter-spacing:1px; font-size:1rem; }
+  .badge-score { color:var(--white); font-family:'Bebas Neue',sans-serif; font-size:2rem; line-height:1; }
+  .badge-meta { flex-direction:column; display:flex; }
+  .badge-reviews { letter-spacing:1.5px; color:#fff9; text-transform:uppercase; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:600; }
+  .badge-source { color:var(--gray); font-family:Barlow,sans-serif; font-size:11px; }
+  @keyframes fadeUp { 0% { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+
+  /* ============ STRIPS ============ */
+  .strip { background:var(--orange); flex-wrap:wrap; justify-content:center; align-items:center; gap:3rem; padding:.9rem 3rem; display:flex; }
+  .strip-item { letter-spacing:3px; text-transform:uppercase; color:var(--white); align-items:center; gap:.5rem; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; display:flex; }
+  .strip-item:before { content:"●"; opacity:.7; font-size:6px; }
+  .strip-item:first-child:before { display:none; }
+
+  /* ============ BANDS ============ */
+  .orange-band { background:var(--orange); position:relative; overflow:hidden; padding:0; display:block; }
+  /* Diagonal-stripe pattern layer (spans full width of the band) */
+  .orange-band:before { content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:url("images/logo-footer.png"), repeating-linear-gradient(-45deg, #0000 0 14px, #00000033 14px 22px);
+    background-repeat:repeat, repeat;
+    background-size:360px auto, auto;
+    opacity:.88; }
+  /* Thin blue line at the bottom */
+  .orange-band:after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:linear-gradient(to right, transparent, var(--blue) 15%, var(--blue) 85%, transparent); }
+  .orange-band .band-bottom { display:none; }
+
+  .orange-band-inner { position:relative; z-index:1;
+    display:grid; grid-template-columns:auto 1fr auto 1fr auto;
+    align-items:center; gap:1.5rem;
+    padding:11px 2.5rem; }
+  .band-logo { height:32px; width:auto; display:block; filter:drop-shadow(0 2px 4px #00000059); }
+  .band-rule { height:1px; background:linear-gradient(to right, #ffffff00, #ffffff80 50%, #ffffff00); min-width:0; }
+  .band-mark { letter-spacing:6px; text-transform:uppercase; color:#ffffffe6; white-space:nowrap;
+    font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; line-height:1;
+    text-shadow:0 1px 2px #0000004d; padding:0 .25rem; }
+
+  @media (max-width:600px) {
+    .orange-band-inner { padding:9px 1rem; gap:.85rem; grid-template-columns:auto 1fr auto 1fr auto; }
+    .band-logo { height:26px; }
+    .band-mark { font-size:10px; letter-spacing:3px; }
+  }
+
+  /* ============ SECTIONS ============ */
+  section { padding:6rem 3rem; }
+  .section-label { letter-spacing:5px; text-transform:uppercase; color:var(--orange); align-items:center; gap:.75rem; margin-bottom:.75rem; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; display:flex; }
+  .section-label:before { content:""; background:var(--orange); width:24px; height:2px; display:block; }
+  .section-title { letter-spacing:2px; color:var(--white); margin-bottom:1.25rem; font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem, 5vw, 4rem); line-height:1; }
+  .section-title .accent { color:var(--orange); }
+  .section-subtitle { color:#ffffff8c; max-width:520px; font-family:Barlow,sans-serif; font-size:1rem; font-weight:300; line-height:1.7; }
+
+  /* ============ SERVICIOS ============ */
+  #servicios { background:
+      radial-gradient(900px 520px at 8% -5%, #f2430012, transparent 60%),
+      radial-gradient(900px 600px at 100% 105%, #0a246314, transparent 60%),
+      linear-gradient(180deg, #eef1f7 0%, #f3f5f9 100%);
+    padding:7rem 3rem; position:relative; overflow:hidden; }
+  #servicios:before { content:""; position:absolute; inset:0; background-image:linear-gradient(#0a246314 1px, transparent 1px), linear-gradient(90deg, #0a246314 1px, transparent 1px); background-size:80px 80px; mask-image:radial-gradient(ellipse at center, #000 30%, transparent 78%); pointer-events:none; }
+  #servicios:after { content:""; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg, transparent, #0a24631a 20%, #0a24631a 80%, transparent); }
+  .services-watermark { position:absolute; inset:0; pointer-events:none; z-index:0; background:#16223f; opacity:.07;
+    -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat; -webkit-mask-size:440px auto; mask-size:440px auto; }
+  @media (max-width:760px){ .services-watermark { opacity:.045; -webkit-mask-size:300px auto; mask-size:300px auto; } }
+  .services-shell { max-width:1280px; margin:0 auto; position:relative; z-index:1; }
+  .services-header { display:grid; grid-template-columns:1fr auto; align-items:end; gap:3rem; margin-bottom:4rem; padding-bottom:2rem; border-bottom:1px solid #0a246314; }
+  .services-header-left { max-width:680px; }
+  .services-header .section-label { color:var(--orange); }
+  .services-header .section-label:before { background:var(--orange); }
+  .services-header .section-title { color:var(--blue); margin-bottom:1.25rem; }
+  .services-header .section-title .accent { color:var(--orange); }
+  .services-header .section-subtitle { color:#5a6178; max-width:520px; }
+  .services-header-right { display:flex; flex-direction:column; align-items:flex-end; gap:1rem; }
+  .services-count { color:#0a246380; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:700; display:flex; align-items:center; gap:.6rem; white-space:nowrap; }
+  .services-count strong { color:var(--orange); font-family:'Bebas Neue',sans-serif; font-size:2.6rem; line-height:1; letter-spacing:1px; }
+
+  .services-grid { grid-template-columns:repeat(2, 1fr); gap:1.75rem; display:grid; }
+  .service-card { background:var(--white); cursor:default; border:1px solid #0a246314; border-radius:4px; display:flex; flex-direction:column; transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s, border-color .35s; overflow:hidden; box-shadow:0 2px 12px #0a246312; position:relative; }
+  .service-card:before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:var(--orange); transform:scaleX(0); transform-origin:0 50%; transition:transform .45s cubic-bezier(.22,.61,.36,1); z-index:3; }
+  .service-card:hover { transform:translateY(-6px); border-color:#f2430040; box-shadow:0 24px 48px #0a246326, 0 6px 16px #0a24631a; }
+  .service-card:hover:before { transform:scaleX(1); }
+  .service-media { position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#0a2463; }
+  .service-img { object-fit:cover; width:100%; height:100%; display:block; transition:transform .7s cubic-bezier(.22,.61,.36,1), filter .4s; filter:saturate(.9) contrast(1.05); }
+  .service-card:hover .service-img { transform:scale(1.06); filter:saturate(1) contrast(1.05); }
+  .service-media:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 50%, #0a246380 100%); pointer-events:none; }
+  .service-number-badge { position:absolute; top:1rem; left:1rem; z-index:2; display:flex; align-items:center; gap:.4rem; }
+  .service-number-badge .num { color:var(--white); font-family:'Bebas Neue',sans-serif; font-size:1.6rem; line-height:1; letter-spacing:1px; text-shadow:0 2px 8px #0009; }
+  .service-number-badge .line { width:24px; height:2px; background:var(--orange); }
+  .service-media-title { position:absolute; bottom:1.1rem; left:1.25rem; right:1.25rem; z-index:2; color:var(--white); font-family:'Bebas Neue',sans-serif; font-size:1.85rem; line-height:1; letter-spacing:2px; text-shadow:0 2px 12px #000c; }
+  .service-media-title .accent { color:var(--orange); }
+  .service-media-title.is-placeholder { color:#ffffff80; }
+  .service-card-body { padding:1.6rem 1.5rem 1.5rem; display:flex; flex-direction:column; flex:1; gap:1rem; position:relative; overflow:hidden; }
+  .service-card-body:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none; background:#16223f; opacity:.05;
+    -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat; -webkit-mask-size:260px auto; mask-size:260px auto; }
+  .service-card-body > * { position:relative; z-index:1; }
+  .service-desc { color:#4a5163; font-family:Barlow,sans-serif; font-size:.95rem; line-height:1.65; }
+  .service-features { display:flex; flex-direction:column; gap:.4rem; margin-top:auto; padding-top:.75rem; border-top:1px dashed #0a246314; }
+  .service-feature { color:#0a2463; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:1px; text-transform:uppercase; display:flex; align-items:center; gap:.55rem; }
+  .service-feature:before { content:""; width:14px; height:2px; background:var(--orange); flex-shrink:0; }
+  .service-card.is-placeholder { background:#fbfbfa; border:1px dashed #0a246333; box-shadow:none; }
+  .service-card.is-placeholder:hover { transform:none; border-color:#f2430080; box-shadow:0 8px 24px #0a24631a; }
+  .service-card.is-placeholder .service-media { background:linear-gradient(135deg, #0a246314 0%, #f2430014 100%); }
+  .service-card.is-placeholder .service-media:after { display:none; }
+  .service-placeholder-mark { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.5rem; color:#0a246359; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:700; }
+  .service-placeholder-mark svg { width:32px; height:32px; opacity:.4; }
+
+  .services-cta-row { display:flex; flex-direction:column; align-items:center; gap:1.25rem; margin-top:3.5rem; padding-top:2.5rem; border-top:1px solid #0a246314; text-align:center; }
+  .services-cta-eyebrow { color:#0a246399; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:600; }
+  .services-cta-btn { letter-spacing:2.5px; text-transform:uppercase; background:var(--blue); color:var(--white); border:2px solid var(--blue); cursor:pointer; border-radius:3px; padding:1.1rem 2.6rem; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; text-decoration:none; transition:all .25s; display:inline-flex; align-items:center; gap:.85rem; box-shadow:0 8px 24px #0a246340; position:relative; overflow:hidden; }
+  .services-cta-btn:before { content:""; position:absolute; top:0; left:-100%; bottom:0; width:100%; background:var(--orange); transition:left .45s cubic-bezier(.22,.61,.36,1); z-index:0; }
+  .services-cta-btn:hover { border-color:var(--orange); transform:translateY(-2px); box-shadow:0 12px 32px #f2430059; }
+  .services-cta-btn:hover:before { left:0; }
+  .services-cta-btn span, .services-cta-btn svg { position:relative; z-index:1; }
+  .services-cta-btn svg { width:18px; height:18px; transition:transform .3s; }
+  .services-cta-btn:hover svg { transform:translateX(4px); }
+
+  @media (max-width:760px) {
+    #servicios { padding:4rem 1.5rem; }
+    .services-header { grid-template-columns:1fr; gap:1.5rem; }
+    .services-header-right { align-items:flex-start; }
+    .services-grid { grid-template-columns:1fr; gap:1.25rem; }
+  }
+
+  /* ============ NOSOTROS ============ */
+  #nosotros { padding:7rem 5vw; position:relative; overflow:hidden; }
+  .nosotros-bg { z-index:0; position:absolute; inset:0; overflow:hidden; }
+  .nosotros-bg img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+  .nosotros-bg:after { content:""; position:absolute; inset:0; background:#00000059; }
+  .nosotros-inner { z-index:2; flex-direction:row; align-items:center; gap:5vw; width:100%; display:flex; position:relative; }
+  .nosotros-left { flex:50%; min-width:0; }
+  .nosotros-left .section-label { text-shadow:0 2px 10px #000; }
+  .nosotros-left .section-title { text-shadow:0 2px 16px #000, 0 0 30px #000c; }
+  .nosotros-lead { color:#fffe; text-shadow:0 1px 8px #000c, 0 0 14px #0009; margin-bottom:2rem; font-family:Barlow,sans-serif; font-size:.95rem; font-weight:300; line-height:1.8; }
+  .about-stats { grid-template-columns:1fr 1fr; gap:1.5rem 2rem; margin-bottom:2rem; display:grid; max-width:480px; }
+  .stat-item { border-left:2px solid #f2430066; padding:.55rem 0 .55rem 1rem; cursor:default; position:relative; transition:border-color .3s, background .3s, transform .3s, padding-left .3s; border-radius:0 4px 4px 0; }
+  .stat-item:before { content:""; position:absolute; left:-2px; top:0; bottom:0; width:0; background:linear-gradient(90deg, #00b0ff33 0%, transparent 100%); transition:width .35s cubic-bezier(.22,.61,.36,1); border-radius:0 4px 4px 0; pointer-events:none; }
+  .stat-item:hover { border-left-color:#00b0ff; transform:translateX(3px); padding-left:1.2rem; }
+  .stat-item:hover:before { width:100%; }
+  .stat-item:hover .stat-num { color:#00b0ff; text-shadow:0 0 18px #00b0ff80, 0 2px 10px #000; }
+  .stat-item:hover .stat-label { color:#fff; }
+  .stat-num { color:var(--orange); text-shadow:0 2px 10px #000; font-family:'Bebas Neue',sans-serif; font-size:2.2rem; line-height:1; position:relative; transition:color .3s, text-shadow .3s; }
+  .stat-label { letter-spacing:2px; text-transform:uppercase; color:#fffc; text-shadow:0 1px 6px #000; margin-top:2px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:600; position:relative; transition:color .3s; }
+  .about-quote { border-left:2px solid var(--orange); padding-left:1rem; margin-top:1.5rem; }
+  .about-quote p { color:#fffd; text-shadow:0 1px 8px #000c; font-family:Barlow,sans-serif; font-size:.95rem; font-style:italic; line-height:1.8; }
+  .about-quote cite { letter-spacing:2px; color:var(--orange); text-transform:uppercase; margin-top:.5rem; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-style:normal; font-weight:700; display:block; }
+  .nosotros-right { flex-direction:column; flex:50%; align-items:center; gap:2rem; min-width:0; display:flex; }
+  .team-eyebrow { letter-spacing:5px; text-transform:uppercase; width:100%; color:var(--orange); align-items:center; gap:.75rem; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; display:flex; }
+  .team-eyebrow:before { content:""; background:var(--orange); width:24px; height:2px; display:block; }
+  .team-grid { grid-template-columns:repeat(3, 1fr); gap:1.6rem 1rem; width:100%; max-width:480px; display:grid; }
+  .team-card { text-align:center; flex-direction:column; align-items:center; gap:.5rem; display:flex; cursor:default; }
+  .team-avatar { background:#f243001a; border:2px solid #f2430073; border-radius:50%; justify-content:center; align-items:center; width:96px; height:96px; display:flex; position:relative; overflow:hidden; transition:transform .35s cubic-bezier(.22,.61,.36,1), border-color .35s, box-shadow .35s, background .35s; }
+  .team-avatar img { width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block; transition:transform .45s cubic-bezier(.22,.61,.36,1); }
+  .team-avatar img.frame-tight { object-position:50% 12%; }
+  .team-card:hover .team-avatar { transform:scale(1.12); border-color:var(--orange); box-shadow:0 8px 26px #f2430059, 0 0 0 4px #f243001f; background:#f243002e; }
+  .team-card:hover .team-avatar img { transform:scale(1.06); }
+  .team-avatar--boss { background:#f2430026; border:3px solid var(--orange); width:112px; height:112px; box-shadow:0 0 22px #f2430059; }
+  .team-card--boss:hover .team-avatar { transform:scale(1.08); box-shadow:0 10px 32px #f24300a6, 0 0 0 5px #f243002e; }
+  .team-initials { color:#fff; font-family:'Bebas Neue',sans-serif; font-size:1.6rem; }
+  .team-avatar--boss .team-initials { font-size:2.2rem; }
+  .team-crown { font-size:1.1rem; position:absolute; top:-14px; left:50%; transform:translate(-50%); }
+  .team-name { letter-spacing:1.5px; color:#fff; font-family:'Bebas Neue',sans-serif; font-size:1rem; }
+  .team-card--boss .team-name { color:var(--orange); font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:2px; }
+  .team-role { letter-spacing:2px; text-transform:uppercase; color:#fff6; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; }
+  .team-card--boss .team-role { color:#ffffff80; font-size:11px; }
+
+  /* ============ VEHICULOS ============ */
+  #vehiculos { padding:6rem 3rem 0; text-align:center; position:relative; overflow:hidden; }
+  .veh-bg { z-index:0; position:absolute; inset:0; overflow:hidden; }
+  .veh-bg img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+  .veh-bg:after { content:""; position:absolute; inset:0; background:#000000a6; }
+  .veh-inner { z-index:1; position:relative; }
+  #vehiculos .section-label { color:#fff; justify-content:center; }
+  #vehiculos .section-label:before { background:var(--orange); }
+  #vehiculos .section-title { color:var(--white); }
+  #vehiculos .section-title .accent { color:var(--orange); }
+  .vehicles-grid { grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1.25rem; max-width:1000px; margin:3rem auto 0; display:grid; }
+  .vehicle-pill { letter-spacing:2px; text-transform:uppercase; color:var(--white); cursor:default; background:#ffffff14; border:2px solid #ffffff40; border-radius:6px; flex-direction:column; align-items:center; gap:.5rem; padding:1.4rem 1rem; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; transition:all .25s; display:flex; backdrop-filter:blur(4px); }
+  .vehicle-pill .veh-icon { font-size:2rem; }
+  .vehicle-pill.active { background:var(--orange); border-color:var(--orange); box-shadow:0 6px 20px #f2430066; }
+  .vehicle-pill:hover { border-color:var(--orange); background:#f2430033; transform:translateY(-3px); box-shadow:0 6px 20px #f2430033; }
+  .vehicle-pill.active:hover { background:var(--orange-dark); }
+  .vehicles-note { color:#fff9; letter-spacing:1px; margin-top:2rem; padding-bottom:6rem; font-family:Barlow,sans-serif; font-size:.85rem; }
+
+  /* ============ REVIEWS ============ */
+  #opiniones { padding:6rem 0 6rem; position:relative; overflow:hidden; isolation:isolate; }
+  .rev-bg { position:absolute; inset:0; z-index:-2; overflow:hidden; background:#0a0a0a; }
+  .rev-bg img { position:absolute; top:0; left:0; width:100%; height:auto; min-height:100%; object-fit:cover; object-position:50% 0%; display:block; }
+  .rev-bg:before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, #000000a6 0%, #00000073 35%, #000000b3 75%, #000 100%); z-index:1; }
+  .rev-bg:after { content:""; position:absolute; inset:0; background:repeating-linear-gradient(135deg, transparent 0 20px, #ffffff05 20px 22px); z-index:1; }
+
+  .rev-shell { max-width:1280px; margin:0 auto; padding:0 4vw; }
+  .rev-header { display:grid; grid-template-columns:1fr auto; align-items:end; gap:2rem; margin-bottom:3rem; }
+  .rev-header-left .section-label { color:#fff; }
+  .rev-header-left .section-label:before { background:var(--orange); }
+  .rev-header-left .section-title { color:#fff; text-shadow:0 4px 24px #000c; }
+
+  .rev-summary { display:flex; align-items:center; gap:1.25rem; padding:1.1rem 1.4rem; background:#ffffff0d; backdrop-filter:blur(14px); border:1px solid #ffffff1f; border-radius:10px; min-width:280px; }
+  .rev-summary-logo { width:38px; height:38px; flex-shrink:0; }
+  .rev-summary-mid { display:flex; flex-direction:column; gap:.2rem; line-height:1; }
+  .rev-summary-score-row { display:flex; align-items:baseline; gap:.5rem; }
+  .rev-summary-score { color:#fff; font-family:'Bebas Neue',sans-serif; font-size:2.2rem; line-height:1; }
+  .rev-summary-of { color:#ffffff80; font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:600; letter-spacing:1.5px; }
+  .rev-summary-stars { color:var(--yellow); letter-spacing:2px; font-size:.95rem; }
+  .rev-summary-meta { color:#ffffffa6; font-family:'Barlow Condensed',sans-serif; letter-spacing:2px; font-size:11px; text-transform:uppercase; font-weight:600; }
+  .rev-summary-cta { color:var(--white); background:var(--orange); padding:.55rem .9rem; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:12px; letter-spacing:2px; text-transform:uppercase; text-decoration:none; transition:background .2s, transform .15s; white-space:nowrap; }
+  .rev-summary-cta:hover { background:var(--orange-dark); transform:translateY(-1px); }
+
+  .rev-track-wrap { position:relative; overflow:hidden; margin:0 -4vw; padding:.5rem 0 1.5rem; }
+  .rev-track-wrap:before, .rev-track-wrap:after { content:""; position:absolute; top:0; bottom:0; width:5vw; z-index:3; pointer-events:none; }
+  .rev-track-wrap:before { left:0; background:linear-gradient(90deg, #000 0%, transparent 100%); }
+  .rev-track-wrap:after { right:0; background:linear-gradient(-90deg, #000 0%, transparent 100%); }
+  .rev-track { will-change:transform; gap:1.5rem; padding:0 4vw; transition:transform .55s cubic-bezier(.22,.61,.36,1); display:flex; }
+
+  .rev-card { flex:0 0 380px; cursor:default; background:linear-gradient(180deg, #16161666 0%, #0d0d0d80 100%); backdrop-filter:blur(14px) saturate(120%); -webkit-backdrop-filter:blur(14px) saturate(120%); border:1px solid #ffffff1f; border-radius:14px; padding:2rem 2rem 1.6rem; position:relative; overflow:hidden; transition:transform .35s ease, border-color .35s, box-shadow .35s; box-shadow:0 8px 32px #00000059, inset 0 1px 0 #ffffff0d; }
+  .rev-card:before { content:""; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--orange), #ff8a4d); transform:scaleX(0); transform-origin:0; transition:transform .4s ease; }
+  .rev-card:after { content:"“"; color:#f2430014; font-family:Georgia,serif; font-size:9rem; line-height:1; position:absolute; top:-18px; right:18px; transition:color .35s; }
+  .rev-card:hover { transform:translateY(-8px); border-color:#f2430059; box-shadow:0 30px 60px #00000099, 0 0 0 1px #f2430033; }
+  .rev-card:hover:before { transform:scaleX(1); }
+  .rev-card:hover:after { color:#f2430026; }
+
+  .rev-card-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.1rem; position:relative; z-index:1; }
+  .rev-stars { color:var(--yellow); letter-spacing:3px; font-size:1.05rem; }
+  .rev-google { width:18px; height:18px; flex-shrink:0; opacity:.85; }
+
+  .rev-text { color:#ffffffd9; min-height:120px; margin-bottom:1.5rem; font-family:Barlow,sans-serif; font-size:.95rem; font-weight:300; line-height:1.7; position:relative; z-index:1; }
+  .rev-text:before { content:"“"; color:var(--orange); font-family:Georgia,serif; font-size:1.4rem; font-weight:700; margin-right:.15rem; vertical-align:-.2em; }
+
+  .rev-divider { height:1px; background:linear-gradient(90deg, transparent, #ffffff1f, transparent); margin-bottom:1.1rem; }
+  .rev-author { align-items:center; gap:.85rem; display:flex; position:relative; z-index:1; }
+  .rev-avatar { background:linear-gradient(135deg, var(--orange) 0%, #c73800 100%); color:#fff; border-radius:50%; flex-shrink:0; justify-content:center; align-items:center; width:42px; height:42px; font-family:'Bebas Neue',sans-serif; font-size:15px; letter-spacing:1px; display:flex; box-shadow:0 4px 12px #f2430059; }
+  .rev-author-meta { display:flex; flex-direction:column; gap:2px; min-width:0; flex:1; }
+  .rev-name { color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:15px; font-weight:700; letter-spacing:.5px; }
+  .rev-date { color:#ffffff80; font-family:Barlow,sans-serif; font-size:11.5px; display:flex; align-items:center; gap:.4rem; }
+  .rev-date svg { width:11px; height:11px; flex-shrink:0; }
+
+  .rev-footer { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:2.5rem; }
+  .rev-dots { justify-content:center; gap:.5rem; display:flex; flex:1; }
+  .rev-dot { cursor:pointer; background:#ffffff26; border:none; border-radius:50%; width:8px; height:8px; padding:0; transition:all .3s; }
+  .rev-dot.active { background:var(--orange); border-radius:4px; width:28px; }
+  .rev-arrows { align-items:center; gap:.6rem; display:flex; }
+  .rev-arrows button { cursor:pointer; border-radius:50%; justify-content:center; align-items:center; width:48px; height:48px; font-size:1.4rem; transition:all .2s; display:flex; font-family:'Bebas Neue',sans-serif; }
+  #revPrev { color:#fff; background:#ffffff0d; border:1px solid #ffffff26; }
+  #revPrev:hover { background:#ffffff1f; border-color:#ffffff66; transform:translateX(-2px); }
+  #revNext { background:var(--orange); border:1px solid var(--orange); color:#fff; box-shadow:0 6px 18px #f2430059; }
+  #revNext:hover { background:var(--orange-dark); transform:translateX(2px); }
+
+  @media (max-width:760px) {
+    .rev-header { grid-template-columns:1fr; }
+    .rev-summary { min-width:0; flex-wrap:wrap; }
+    .rev-card { flex:0 0 85vw; }
+    .rev-footer { flex-direction:column-reverse; gap:1.5rem; }
+  }
+
+  /* ============ CTA ============ */
+  #contacto { background:var(--orange); text-align:center; padding:6rem 3rem; position:relative; overflow:hidden; }
+  #contacto:before { content:""; pointer-events:none; background:repeating-linear-gradient(-45deg, #0000, #0000 16px, #00000024 16px 22px); position:absolute; inset:0; z-index:0; }
+  #contacto:after { content:""; background:repeating-linear-gradient(90deg, #0006 0 8px, #0000 8px 16px); height:4px; position:absolute; bottom:0; left:0; right:0; z-index:2; }
+  .cta-pattern { position:absolute; top:-20%; left:-20%; right:-20%; bottom:-20%; width:140%; height:140%; pointer-events:none; z-index:1; background-image:url("images/logo-footer.png"); background-repeat:repeat; background-size:680px auto; transform:rotate(-12deg); opacity:.95; }
+  .cta-rail { background:var(--blue); width:8px; height:100%; position:absolute; top:0; z-index:3; }
+  .cta-rail.l { left:0; } .cta-rail.r { right:0; }
+  .cta-inner { z-index:4; max-width:700px; margin:0 auto; position:relative; }
+  .cta-label { letter-spacing:5px; text-transform:uppercase; color:#ffffffb3; margin-bottom:1rem; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; }
+  .cta-title { letter-spacing:3px; color:var(--white); margin-bottom:1.5rem; font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem, 7vw, 5.5rem); line-height:.9; }
+  .cta-subtitle { color:#fffc; margin-bottom:2.5rem; font-family:Barlow,sans-serif; font-size:1.1rem; line-height:1.6; }
+  .cta-contact-info { flex-wrap:wrap; justify-content:center; gap:2.5rem; margin-bottom:2.5rem; display:flex; }
+  .cta-contact-item { flex-direction:column; align-items:center; gap:.25rem; display:flex; }
+  .cta-contact-icon { font-size:1.4rem; }
+  .cta-contact-label { letter-spacing:3px; text-transform:uppercase; color:#fff9; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; }
+  .cta-contact-value { color:var(--white); letter-spacing:1px; font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; text-decoration:none; }
+  .btn-dark { letter-spacing:2.5px; text-transform:uppercase; background:var(--blue); color:var(--white); border:2px solid var(--blue); cursor:pointer; border-radius:2px; padding:1rem 2.8rem; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; text-decoration:none; transition:all .2s; display:inline-block; }
+  .btn-dark:hover { background:#08204f; transform:translateY(-2px); }
+
+  /* CTA map */
+  .cta-map-wrap { margin-top:3.5rem; max-width:920px; margin-left:auto; margin-right:auto; position:relative; }
+  .cta-map-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; flex-wrap:wrap; }
+  .cta-map-label { color:var(--white); font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:3.5px; text-transform:uppercase; display:flex; align-items:center; gap:.75rem; }
+  .cta-map-label:before { content:""; width:24px; height:2px; background:var(--blue); display:block; }
+  .cta-map-address { color:#ffffffe6; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:1.5px; text-decoration:none; transition:color .2s; display:inline-flex; align-items:center; gap:.4rem; }
+  .cta-map-address:hover { color:var(--blue); }
+  .cta-map-address svg { width:14px; height:14px; }
+  .cta-map-frame { position:relative; border-radius:4px; overflow:hidden; border:4px solid var(--blue); box-shadow:0 16px 40px #00000059, 0 0 0 1px #ffffff14; background:#0a2463; }
+  .cta-map-frame iframe { display:block; width:100%; height:360px; border:0; filter:saturate(.95) contrast(1.05); }
+  .cta-map-pin { position:absolute; top:1rem; left:1rem; z-index:2; background:var(--blue); color:#fff; padding:.45rem .85rem; border-radius:3px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; display:flex; align-items:center; gap:.45rem; box-shadow:0 4px 12px #00000080; }
+  .cta-map-pin svg { width:12px; height:12px; }
+  @media (max-width:640px) { .cta-map-frame iframe { height:280px; } }
+
+  /* ============ FOOTER ============ */
+  footer { background:var(--black); border-top:1px solid #ffffff12; grid-template-columns:1.7fr 1fr 1fr; align-items:start; gap:2.5rem 3rem; padding:3.5rem 3rem; display:grid; }
+  .footer-tagline { color:#ffffff59; max-width:300px; margin-top:1rem; font-family:Barlow,sans-serif; font-size:.875rem; line-height:1.7; }
+  .footer-contact { display:flex; flex-direction:column; gap:.55rem; margin-top:1.4rem; }
+  .footer-contact a, .footer-contact span { color:#ffffff8c; font-family:Barlow,sans-serif; font-size:.86rem; text-decoration:none; display:flex; align-items:center; gap:.55rem; transition:color .2s; }
+  .footer-contact a:hover { color:var(--orange); }
+  .footer-contact svg { width:15px; height:15px; flex-shrink:0; color:var(--orange); }
+  .footer-col { display:flex; flex-direction:column; gap:.65rem; }
+  .footer-col h4 { color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:.7rem; padding-bottom:.7rem; position:relative; }
+  .footer-col h4:after { content:""; position:absolute; left:0; bottom:0; width:28px; height:2px; background:var(--orange); }
+  .footer-col a { color:#ffffff8c; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:1.3px; text-transform:uppercase; text-decoration:none; transition:color .2s, padding-left .2s; cursor:pointer; }
+  .footer-col a:hover { color:var(--orange); padding-left:5px; }
+  .footer-bottom { background:var(--black); border-top:1px solid #ffffff0d; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.5rem; padding:1rem 3rem; display:flex; }
+  .footer-copy { color:#fff3; font-family:Barlow,sans-serif; font-size:11px; }
+  .footer-copy span { color:var(--orange); }
+  .footer-social { gap:1rem; display:flex; }
+  .social-link { letter-spacing:2px; text-transform:uppercase; color:#ffffff4d; border:1px solid #ffffff1a; padding:4px 10px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:600; text-decoration:none; transition:all .2s; }
+  .social-link:hover { color:var(--orange); border-color:var(--orange); }
+  .footer-legal { background:var(--black); border-top:1px solid #ffffff0d; display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.6rem; padding:1.1rem 3rem .4rem; }
+  .footer-legal a { color:#ffffff73; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:color .2s; cursor:pointer; }
+  .footer-legal a:hover { color:var(--orange); }
+
+  /* ============ RESPONSIVE ============ */
+
+  /* ---------- TABLET LANDSCAPE ---------- */
+  @media (max-width:1024px) {
+    .nosotros-inner { gap:3vw; }
+    .rev-card { flex:0 0 340px; }
+  }
+
+  /* ---------- TABLET / SMALL LAPTOP ---------- */
+  @media (max-width:900px) {
+    .nav-utility { display:none; }
+    nav { padding:.7rem 1.2rem; }
+    .nav-links, .nav-cta { display:none; }
+    .hamburger { display:flex; }
+    .nav-logo-img { height:46px; }
+
+    /* Unify horizontal padding across ALL sections (ID rules need matching specificity) */
+    section { padding:4.5rem 1.5rem; }
+    #servicios { padding:4.5rem 1.5rem; }
+    #vehiculos { padding:4.5rem 1.5rem 0; }
+    #contacto  { padding:4.5rem 1.5rem; }
+    #nosotros  { padding:4.5rem 1.5rem; }
+
+    .hero { height:auto; min-height:88vh; padding-top:92px; }
+    .hero-content { padding:0 1.5rem; }
+    .hero-inner { max-width:none; }
+    .hero-badge { bottom:4rem; right:1.5rem; }
+
+    .nosotros-inner { flex-direction:column; gap:2.5rem; }
+    .nosotros-right { width:100%; }
+    .about-stats { max-width:none; }
+
+    footer { grid-template-columns:1fr 1fr; gap:2rem 1.5rem; padding:2.5rem 1.5rem; }
+    .footer-brand { grid-column:1 / -1; }
+    .footer-bottom { padding:1rem 1.5rem; }
+    .strip { gap:1.5rem; padding:.9rem 1.5rem; }
+  }
+
+  /* ---------- LARGE PHONE ---------- */
+  @media (max-width:600px) {
+    section    { padding:3.25rem 1.15rem; }
+    #servicios { padding:3.25rem 1.15rem; }
+    #contacto  { padding:3.25rem 1.15rem; }
+    #nosotros  { padding:3.25rem 1.15rem; }
+    #vehiculos { padding:3.25rem 1.15rem 0; }
+    #opiniones { padding:3.25rem 0; }
+
+    .hero { min-height:86vh; padding-top:84px; }
+    .hero-line1, .hero-line2 { font-size:clamp(3.5rem, 17vw, 5.5rem); letter-spacing:1px; }
+    .hero-eyebrow { font-size:11px; letter-spacing:3.5px; }
+    .hero-subtitle { font-size:1rem; margin-bottom:1.9rem; }
+    .hero-buttons { gap:.7rem; }
+    .btn-primary, .btn-secondary { padding:.85rem 1rem; font-size:13px; flex:1 1 0; justify-content:center; }
+    .hero-badge { display:none; }
+
+    .services-header .section-title br { display:none; }
+    .services-count strong { font-size:2.1rem; }
+
+    .about-stats { grid-template-columns:1fr 1fr; gap:1rem 1.25rem; }
+    .team-grid { grid-template-columns:repeat(3, 1fr); gap:1.2rem .5rem; max-width:340px; }
+    .team-avatar { width:78px; height:78px; }
+    .team-avatar--boss { width:100px; height:100px; }
+
+    .cta-contact-info { gap:1.25rem 1.75rem; }
+    .cta-title br, .cta-subtitle br { display:none; }
+
+    footer { grid-template-columns:1fr; gap:2rem; }
+    .footer-bottom { flex-direction:column; align-items:flex-start; }
+    .footer-legal { gap:.5rem 1.1rem; justify-content:flex-start; padding:1.1rem 1.15rem .3rem; }
+  }
+
+  /* ---------- SMALL PHONE ---------- */
+  @media (max-width:380px) {
+    .hero-line1, .hero-line2 { font-size:clamp(3rem, 16vw, 4.4rem); }
+    .hero-subtitle { font-size:.95rem; }
+    .band-mark { font-size:9px; letter-spacing:2px; }
+    .team-avatar { width:70px; height:70px; }
+    .nav-logo-img { height:42px; }
+  }
+
+  /* Avoid sticky :hover lift getting stuck on touch devices */
+  @media (hover:none) {
+    .service-card:hover { transform:none; }
+    .vehicle-pill:hover { transform:none; }
+    .team-card:hover .team-avatar { transform:none; }
+  }
+
+  /* ---------- MOBILE & PORTRAIT TABLET: show full photos, no crop ---------- */
+  @media (max-width:860px) {
+    /* HERO → stacked: whole rally car on top, headline on grayish-blue below */
+    .hero { height:auto; min-height:0; padding:64px 0 0; display:flex; flex-direction:column;
+            background:#212d40; overflow:visible; }
+    .hero-bg { position:relative; inset:auto; width:100%; height:auto; overflow:hidden;
+               border-bottom:3px solid var(--orange); }
+    .hero-bg:before { display:none; }
+    .hero-video { position:relative; inset:auto; width:100%; height:auto; object-fit:contain;
+                  opacity:1; }
+    .hero-grid, .hero-glow, .hero-overlay { display:none; }
+    .hero-content { position:relative; flex:none; align-items:flex-start;
+                    padding:2.6rem 1.5rem 2.8rem; overflow:hidden; }
+    /* faint "M" logo watermark over the grayish-blue panel */
+    .hero-content:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+                           background:#465f8a; opacity:.16;
+                           -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat;
+                           -webkit-mask-size:300px auto; mask-size:300px auto; }
+    .hero-inner { position:relative; z-index:1; }
+    .hero-inner { max-width:none; }
+    .hero-heading { margin-bottom:1.1rem; }
+    .hero-subtitle { max-width:none; }
+
+    /* SOBRE NOSOTROS → full team photo as a banner, content below on grayish-blue */
+    #nosotros { display:block; background:#212d40; }
+    #nosotros:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+                       background:#465f8a; opacity:.16;
+                       -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat;
+                       -webkit-mask-size:300px auto; mask-size:300px auto; }
+    .nosotros-bg { position:relative; inset:auto; width:100%; height:auto; margin-bottom:2.2rem;
+                   border-radius:12px; overflow:hidden; border:1px solid #ffffff26;
+                   box-shadow:0 14px 34px #00000073; }
+    .nosotros-bg:after { display:none; }
+    .nosotros-bg img { position:relative; width:100%; height:auto; object-fit:contain; }
+    .nosotros-left .section-title { text-shadow:none; }
+    .nosotros-lead, .about-quote p { text-shadow:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap" id="navWrap">
+<div class="nav-utility">
+  <div class="nav-utility-left">
+    <a class="nav-util-item" href="tel:699911407">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <strong>699 91 14 07</strong>
+    </a>
+    <span class="nav-util-sep"></span>
+    <span class="nav-util-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+      Lun–Vie · 8:00–14:00 / 16:00–20:00
+    </span>
+    <span class="nav-util-sep"></span>
+    <span class="nav-util-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      C. Concordia, 8 · Sangonera la Seca
+    </span>
+  </div>
+  <div class="nav-utility-right">
+    <span class="nav-util-item">Síguenos</span>
+    <div class="nav-util-social">
+      <a href="https://www.tiktok.com/@talleresmateo2.0" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53 1.85h3.36a5.83 5.83 0 0 0 4.7 4.7v3.36a9.13 9.13 0 0 1-4.7-1.32v7.1a6.2 6.2 0 1 1-6.2-6.2c.3 0 .58.02.87.07v3.43a2.86 2.86 0 1 0 1.96 2.7v-13.84z"></path></svg>
+      </a>
+      <a href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener" aria-label="Google">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" opacity=".95"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23zM5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83zM12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<nav id="navbar">
+  <a class="nav-brand" href="#">
+    <img class="nav-logo-img" src="images/logo.png" alt="Talleres Mateo 2.0">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#vehiculos">Vehículos</a></li>
+    <li><a href="#opiniones">Opiniones</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="legal.html">Legal</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:699911407">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    Llamar ahora
+  </a>
+  <button aria-label="Abrir menú" class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#servicios">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#opiniones">Opiniones</a>
+  <a href="#contacto">Contacto</a>
+  <a href="legal.html">Aviso Legal</a>
+  <a href="tel:699911407" style="color:var(--orange)">699 91 14 07</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg">
+    <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="assets/rally-mateo.mp4" type="video/mp4">
+    </video>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Sangonera la Seca · Murcia</p>
+      <h1 class="hero-heading">
+        <span class="hero-line1">Potencia.</span>
+        <span class="hero-line2">Preci<span class="accent">sión.</span></span>
+      </h1>
+      <p class="hero-subtitle">Mecánica y electricidad de alto rendimiento. Expertos en diagnosis, reparamos todo tipo de averías en vehículos diésel, gasolina, híbridos y eléctricos.</p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="#servicios">Ver Servicios →</a>
+        <a class="btn-secondary" href="tel:699911407">☎ Llamar ahora</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-checker"></div>
+</section>
+
+<!-- ============ BAND ============ -->
+<div class="orange-band">
+  <div class="band-bottom"></div>
+  <div class="orange-band-inner">
+    <img class="band-logo" src="images/logo.png" alt="">
+    <div class="band-rule"></div>
+    <span class="band-mark">Talleres Mateo 2.0</span>
+    <div class="band-rule"></div>
+    <img class="band-logo" src="images/logo.png" alt="">
+  </div>
+</div>
+
+<!-- ============ SERVICIOS ============ -->
+<section id="servicios">
+  <div class="services-watermark" aria-hidden="true"></div>
+  <div class="services-shell">
+    <div class="services-header">
+      <div class="services-header-left">
+        <p class="section-label">Nuestros servicios</p>
+        <h2 class="section-title">Todo lo que tu<br>vehículo <span class="accent">necesita</span></h2>
+        <p class="section-subtitle">Taller especializado en automoción. Diagnóstico preciso, reparación eficiente y atención cercana — desde la mecánica más clásica hasta los sistemas eléctricos más complejos.</p>
+      </div>
+      <div class="services-header-right">
+        <div class="services-count">
+          <strong>04</strong>
+          <span>Servicios<br>destacados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-media">
+          <img alt="Mecánica General" class="service-img" loading="lazy" src="images/service-mecanica.jpg">
+          <div class="service-number-badge"><span class="num">01</span><span class="line"></span></div>
+          <h3 class="service-media-title">Mecánica <span class="accent">General</span></h3>
+        </div>
+        <div class="service-card-body">
+          <p class="service-desc">Revisiones completas, mantenimiento periódico y reparaciones de motor, frenos, suspensión y distribución. Todo lo que tu vehículo necesita para rendir al máximo.</p>
+          <div class="service-features">
+            <span class="service-feature">Motor &amp; distribución</span>
+            <span class="service-feature">Frenos &amp; suspensión</span>
+            <span class="service-feature">Cambios de aceite</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img alt="Electro-mecánica" class="service-img" loading="lazy" src="images/service-electro.jpg">
+          <div class="service-number-badge"><span class="num">02</span><span class="line"></span></div>
+          <h3 class="service-media-title">Electro-<span class="accent">Mecánica</span></h3>
+        </div>
+        <div class="service-card-body">
+          <p class="service-desc">Especialistas en sistemas eléctricos y electrónicos del vehículo. Reparamos averías eléctricas complejas combinando experiencia mecánica y conocimiento técnico.</p>
+          <div class="service-features">
+            <span class="service-feature">Sistemas eléctricos</span>
+            <span class="service-feature">Sensores &amp; cableado</span>
+            <span class="service-feature">Centralitas</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img alt="Diagnosis" class="service-img" loading="lazy" src="images/service-diagnosis.jpg">
+          <div class="service-number-badge"><span class="num">03</span><span class="line"></span></div>
+          <h3 class="service-media-title"><span class="accent">Diagnosis</span> Avanzada</h3>
+        </div>
+        <div class="service-card-body">
+          <p class="service-desc">Diagnóstico profesional con equipos de última generación. Encontramos el fallo que otros talleres no logran detectar, ahorrándote tiempo y dinero.</p>
+          <div class="service-features">
+            <span class="service-feature">Escáner OBD multimarca</span>
+            <span class="service-feature">Análisis electrónico</span>
+            <span class="service-feature">Codificación &amp; reset</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-media">
+          <img alt="Cajas de Cambio Automáticas" class="service-img" loading="lazy" src="images/service-cajas.jpg">
+          <div class="service-number-badge"><span class="num">04</span><span class="line"></span></div>
+          <h3 class="service-media-title">Cajas de Cambio <span class="accent">Automáticas</span></h3>
+        </div>
+        <div class="service-card-body">
+          <p class="service-desc">Mantenimiento de cajas de cambio automáticas: cambio de aceite y filtro ATF, diagnosis de la transmisión y puesta a punto para una marcha suave y una vida útil más larga.</p>
+          <div class="service-features">
+            <span class="service-feature">Aceite &amp; filtro ATF</span>
+            <span class="service-feature">Diagnosis transmisión</span>
+            <span class="service-feature">Puesta a punto</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="services-cta-row">
+      <p class="services-cta-eyebrow">¿Quieres ver el listado completo?</p>
+      <a class="services-cta-btn" href="Servicios Mateo.html">
+        <span>Ver todos los servicios</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAND ============ -->
+<div class="orange-band">
+  <div class="band-bottom"></div>
+  <div class="orange-band-inner">
+    <img class="band-logo" src="images/logo.png" alt="">
+    <div class="band-rule"></div>
+    <span class="band-mark">Talleres Mateo 2.0</span>
+    <div class="band-rule"></div>
+    <img class="band-logo" src="images/logo.png" alt="">
+  </div>
+</div>
+
+<!-- ============ NOSOTROS ============ -->
+<section id="nosotros">
+  <div class="nosotros-bg">
+    <img src="images/nosotros-equipo.jpg" alt="Equipo Talleres Mateo 2.0">
+  </div>
+  <div class="nosotros-inner">
+    <div class="nosotros-left">
+      <p class="section-label">Sobre nosotros</p>
+      <h2 class="section-title">Confianza en<br>cada <span class="accent">reparación</span></h2>
+      <p class="nosotros-lead">Talleres Mateo 2.0 es el taller mecánico de referencia en Murcia. Con un equipo altamente especializado, ofrecemos diagnósticos precisos y soluciones eficaces para cualquier tipo de vehículo.</p>
+      <div class="about-stats">
+        <div class="stat-item"><div class="stat-num">120+</div><div class="stat-label">Reseñas Google</div></div>
+        <div class="stat-item"><div class="stat-num">4.6★</div><div class="stat-label">Valoración media</div></div>
+        <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Tipos de vehículo</div></div>
+        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Diagnóstico digital</div></div>
+      </div>
+      <div class="about-quote">
+        <p>"Taller de automoción de mecánica y electricidad, experto en diagnosis y reparamos todo tipo de averías eléctricas."</p>
+        <cite>— Mateo, Gerente</cite>
+      </div>
+    </div>
+    <div class="nosotros-right">
+      <p class="team-eyebrow">Nuestro equipo</p>
+      <div class="team-card team-card--boss">
+        <div class="team-avatar team-avatar--boss">
+          <span class="team-crown">👑</span>
+          <img src="images/nosotros-mateo.jpg" alt="Mateo">
+        </div>
+        <span class="team-name">Mateo</span>
+        <span class="team-role">Gerente &amp; Mecánico Jefe</span>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar"><img src="images/team-1.jpg" alt=""></div>
+          <span class="team-role">Mecánico</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="images/team-2.jpg" alt=""></div>
+          <span class="team-role">Mecánico</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="images/team-3.jpg" alt=""></div>
+          <span class="team-role">Mecánico</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img class="frame-tight" src="images/team-4.jpg" alt=""></div>
+          <span class="team-role">Mecánico</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="images/team-5.jpg" alt=""></div>
+          <span class="team-role">Administrativa</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar"><img src="images/team-6.jpg" alt=""></div>
+          <span class="team-role">Mecánico</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BAND ============ -->
+<div class="orange-band">
+  <div class="band-bottom"></div>
+  <div class="orange-band-inner">
+    <img class="band-logo" src="images/logo.png" alt="">
+    <div class="band-rule"></div>
+    <span class="band-mark">Talleres Mateo 2.0</span>
+    <div class="band-rule"></div>
+    <img class="band-logo" src="images/logo.png" alt="">
+  </div>
+</div>
+
+<!-- ============ VEHICULOS ============ -->
+<section id="vehiculos">
+  <div class="veh-bg">
+    <img src="images/competicion.jpg" alt="Coches de competición">
+  </div>
+  <div class="veh-inner">
+    <p class="section-label">Tipos de vehículo</p>
+    <h2 class="section-title">Reparamos tu coche,<br>sea del tipo que <span class="accent">sea</span></h2>
+    <div class="vehicles-grid">
+      <div class="vehicle-pill active"><span class="veh-icon">⛽</span>Gasolina</div>
+      <div class="vehicle-pill active"><span class="veh-icon">🛢</span>Diésel</div>
+      <div class="vehicle-pill"><span class="veh-icon">⚡</span>Híbrido</div>
+      <div class="vehicle-pill"><span class="veh-icon">🔋</span>Eléctrico</div>
+    </div>
+    <p class="vehicles-note">✓ Todos los vehículos con garantía de reparación</p>
+  </div>
+</section>
+
+<!-- ============ BAND ============ -->
+<div class="orange-band">
+  <div class="band-bottom"></div>
+  <div class="orange-band-inner">
+    <img class="band-logo" src="images/logo.png" alt="">
+    <div class="band-rule"></div>
+    <span class="band-mark">Talleres Mateo 2.0</span>
+    <div class="band-rule"></div>
+    <img class="band-logo" src="images/logo.png" alt="">
+  </div>
+</div>
+
+<!-- ============ OPINIONES ============ -->
+<section id="opiniones">
+  <div class="rev-bg">
+    <img src="images/contacto-foto.jpg" alt="">
+  </div>
+  <div class="rev-shell">
+    <div class="rev-header">
+      <div class="rev-header-left">
+        <p class="section-label">Opiniones verificadas</p>
+        <h2 class="section-title">Lo que dicen<br>nuestros <span class="accent">clientes</span></h2>
+      </div>
+      <div class="rev-summary">
+        <svg class="rev-summary-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path>
+          <path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path>
+        </svg>
+        <div class="rev-summary-mid">
+          <div class="rev-summary-score-row">
+            <span class="rev-summary-score">4.6</span>
+            <span class="rev-summary-of">/ 5</span>
+          </div>
+          <div class="rev-summary-stars">★★★★★</div>
+          <div class="rev-summary-meta">120+ reseñas en Google</div>
+        </div>
+        <a class="rev-summary-cta" href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener">Ver todas</a>
+      </div>
+    </div>
+
+    <div class="rev-track-wrap">
+      <div class="rev-track" id="revTrack">
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★★</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">Muy profesional y muy cercano el trato de Mateo. Le dije lo que me sucedió, me dijo lo que se debía hacer. Resultado perfecto, 100% recomendable.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">JP</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Jean Paul Hernández</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 2 meses</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★★</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">El mejor taller que he podido encontrar en Murcia. Nadie me sacaba el fallo y ellos lo han solucionado de diez. Dando tumbos por varios talleres y al fin lo encuentran.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">NG</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Noelia Gómez</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 2 meses</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★★</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">Una experiencia nueva, no conocía a Mateo y me ha sorprendido. Atención, experiencia y como ha solucionado todos los problemas de mi vehículo. De lujo.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">PL</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Paco López</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 2 meses</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★★</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">Fui con un problema eléctrico que otros talleres no conseguían diagnosticar. En Talleres Mateo 2.0 lo resolvieron en el mismo día. Increíble nivel de diagnosis.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">MR</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Miguel Ruiz</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 3 meses</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★★</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">Llevé mi híbrido con un problema de batería. Mateo me explicó todo con detalle y el precio fue muy justo. No voy a otro taller en mi vida. Totalmente recomendado.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">AS</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Ana Sánchez</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 1 mes</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★☆</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">Trato cercano y muy profesional. El taller está muy bien equipado y se nota que saben lo que hacen. Repararon mi coche diésel rápido y sin sorpresas en la factura.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">JT</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Jorge Torres</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 1 mes</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="rev-card">
+          <div class="rev-card-head">
+            <div class="rev-stars">★★★★★</div>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+          </div>
+          <p class="rev-text">Segunda vez que vengo y repito sin dudarlo. Arreglaron un problema de sensor que llevaba meses sin solución. El presupuesto fue claro desde el principio. 10/10.</p>
+          <div class="rev-divider"></div>
+          <div class="rev-author">
+            <div class="rev-avatar">LM</div>
+            <div class="rev-author-meta">
+              <span class="rev-name">Laura Martínez</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 3 semanas</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="rev-footer">
+      <div class="rev-arrows">
+        <button aria-label="Anterior" id="revPrev">‹</button>
+        <button aria-label="Siguiente" id="revNext">›</button>
+      </div>
+      <div class="rev-dots" id="revDots"></div>
+      <a class="rev-summary-cta" href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener">Dejar reseña ★</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO / CTA ============ -->
+<section id="contacto">
+  <div class="cta-rail l"></div>
+  <div class="cta-rail r"></div>
+  <div class="cta-pattern" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <p class="cta-label">Reserva tu visita</p>
+    <h2 class="cta-title">¿Tu coche<br>tiene un problema?</h2>
+    <p class="cta-subtitle">Llámanos ahora o visítanos en Sangonera la Seca. Diagnóstico profesional y reparación garantizada.</p>
+    <div class="cta-contact-info">
+      <div class="cta-contact-item">
+        <span class="cta-contact-icon">📞</span>
+        <span class="cta-contact-label">Teléfono</span>
+        <a class="cta-contact-value" href="tel:699911407">699 91 14 07</a>
+      </div>
+      <div class="cta-contact-item">
+        <span class="cta-contact-icon">📍</span>
+        <span class="cta-contact-label">Dirección</span>
+        <span class="cta-contact-value" style="font-size:.9rem">C. Concordia, 8 · Murcia</span>
+      </div>
+      <div class="cta-contact-item">
+        <span class="cta-contact-icon">🕐</span>
+        <span class="cta-contact-label">Horario</span>
+        <span class="cta-contact-value" style="font-size:.9rem">Lun–Vie · 8:00–14:00 / 16:00–20:00</span>
+      </div>
+    </div>
+    <a class="btn-dark" href="tel:699911407">☎ Llamar ahora</a>
+
+    <div class="cta-map-wrap">
+      <div class="cta-map-head">
+        <span class="cta-map-label">Dónde estamos</span>
+        <a class="cta-map-address" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Concordia+8+Sangonera+la+Seca+Murcia" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          C. Concordia, 8 · Sangonera la Seca
+        </a>
+      </div>
+      <div class="cta-map-frame">
+        <span class="cta-map-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Talleres Mateo 2.0
+        </span>
+        <iframe src="https://www.google.com/maps?q=Calle+Concordia+8,+Sangonera+la+Seca,+Murcia&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" title="Ubicación Talleres Mateo 2.0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-brand">
+    <a class="nav-brand" href="#">
+      <img class="nav-logo-img" src="images/logo.png" alt="Talleres Mateo 2.0">
+    </a>
+    <p class="footer-tagline">Mecánica y electricidad de confianza en Sangonera la Seca, Murcia. Tu vehículo en manos expertas.</p>
+    <div class="footer-contact">
+      <a href="tel:699911407">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        699 91 14 07
+      </a>
+      <a href="mailto:talleresmateo2.0.oficina@hotmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Escríbenos un email
+      </a>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        C. Concordia, 8 · Sangonera la Seca
+      </span>
+    </div>
+  </div>
+
+  <div class="footer-col">
+    <h4>Legal</h4>
+    <a href="legal.html#aviso-legal">Aviso Legal</a>
+    <a href="legal.html#privacidad">Política de Privacidad</a>
+    <a href="legal.html#cookies">Política de Cookies</a>
+    <a href="legal.html#derechos">Ejercicio de Derechos</a>
+    <a href="#" data-cookie-settings="">Configuración de cookies</a>
+  </div>
+
+  <div class="footer-col">
+    <h4>Explora</h4>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#vehiculos">Vehículos</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p class="footer-copy">© 2026 <span>Talleres Mateo 2.0</span> — C. Concordia, 8 · Sangonera la Seca · Murcia</p>
+  <div class="footer-social">
+    <a class="social-link" href="https://www.tiktok.com/@talleresmateo2.0" target="_blank" rel="noopener">TikTok</a>
+    <a class="social-link" href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener">Google</a>
+  </div>
+</div>
+
+<script>
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  const navWrap = document.getElementById('navWrap');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 40;
+    navbar.classList.toggle('scrolled', scrolled);
+    navWrap.classList.toggle('hide-util', scrolled);
+  });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  function closeMobile() {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  mobileClose.addEventListener('click', closeMobile);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobile));
+
+  // Reviews carousel — seamless infinite loop
+  (function() {
+    const track = document.getElementById('revTrack');
+    const originals = track ? track.querySelectorAll('.rev-card') : [];
+    const dotsEl = document.getElementById('revDots');
+    const btnPrev = document.getElementById('revPrev');
+    const btnNext = document.getElementById('revNext');
+    if (!track || !originals.length) return;
+    const TOTAL = originals.length;
+
+    // Clone all cards once, then append — enables seamless forward loop
+    Array.from(originals).forEach(c => {
+      const clone = c.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+    const allCards = track.querySelectorAll('.rev-card');
+    const CARD_W = () => allCards[0].getBoundingClientRect().width + 24;
+
+    let current = 0; // can range 0..2*TOTAL-1 while animating
+    let autoTimer = null;
+    let busy = false;
+
+    for (let i = 0; i < TOTAL; i++) {
+      const d = document.createElement('button');
+      d.className = 'rev-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(d);
+    }
+
+    function setX(animated) {
+      track.style.transition = animated ? '' : 'none';
+      track.style.transform = 'translateX(-' + (current * CARD_W()) + 'px)';
+      if (!animated) { void track.offsetWidth; track.style.transition = ''; }
+      const active = ((current % TOTAL) + TOTAL) % TOTAL;
+      dotsEl.querySelectorAll('.rev-dot').forEach((d, i) => d.classList.toggle('active', i === active));
+    }
+
+    function goTo(idx) {
+      if (busy) return;
+      if (idx < 0) {
+        // jump to mirror position in clone region, then animate backwards by 1
+        busy = true;
+        current = idx + TOTAL;
+        setX(false);
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          current = current - 1;
+          setX(true);
+          busy = false;
+        }));
+      } else if (idx >= TOTAL) {
+        // animate into clone region, then snap back to mirror in originals
+        busy = true;
+        current = idx;
+        setX(true);
+        setTimeout(() => { current = current - TOTAL; setX(false); busy = false; }, 600);
+      } else {
+        current = idx;
+        setX(true);
+      }
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAuto() { autoTimer = setInterval(next, 4500); }
+    function stopAuto() { clearInterval(autoTimer); }
+
+    btnNext.addEventListener('click', () => { stopAuto(); next(); startAuto(); });
+    btnPrev.addEventListener('click', () => { stopAuto(); prev(); startAuto(); });
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) { stopAuto(); (diff > 0 ? next : prev)(); startAuto(); }
+    });
+    window.addEventListener('resize', () => setX(false));
+    startAuto();
+  })();
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.service-card, .rev-card, .stat-item, .team-card, .vehicle-pill').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s, transform 0.5s';
+    observer.observe(el);
+  });
+</script>
+
+<script src="js/scroll.js"></script>
+
+
+
+
+
+</body></html>

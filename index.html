@@ -1,92 +1,13 @@
-<!DOCTYPE html>
-<html lang="es"><head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talleres Mateo 2.0 — Mecánica &amp; Electricidad</title>
-<style>/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* latin-ext */
-
-/* latin */
-
-/* cyrillic-ext */
-
-/* cyrillic */
-
-/* vietnamese */
-
-/* latin-ext */
-
-/* latin */
-
-/* latin */
-
-</style>
-<script src="js/main.js"></script>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Talleres Mateo 2.0 — Mecánica & Electricidad</title>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Satisfy&family=Lobster&display=swap" rel="stylesheet" />
+<script src="image-slot.js"></script>
 <style>
   *, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -187,7 +108,7 @@
   .orange-band { background:var(--orange); position:relative; overflow:hidden; padding:0; display:block; }
   /* Diagonal-stripe pattern layer (spans full width of the band) */
   .orange-band:before { content:""; position:absolute; inset:0; pointer-events:none;
-    background-image:url("images/logo-footer.png"), repeating-linear-gradient(-45deg, #0000 0 14px, #00000033 14px 22px);
+    background-image:url('assets/m-pattern.png'), repeating-linear-gradient(-45deg, #0000 0 14px, #00000033 14px 22px);
     background-repeat:repeat, repeat;
     background-size:360px auto, auto;
     opacity:.88; }
@@ -228,7 +149,7 @@
   #servicios:before { content:""; position:absolute; inset:0; background-image:linear-gradient(#0a246314 1px, transparent 1px), linear-gradient(90deg, #0a246314 1px, transparent 1px); background-size:80px 80px; mask-image:radial-gradient(ellipse at center, #000 30%, transparent 78%); pointer-events:none; }
   #servicios:after { content:""; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg, transparent, #0a24631a 20%, #0a24631a 80%, transparent); }
   .services-watermark { position:absolute; inset:0; pointer-events:none; z-index:0; background:#16223f; opacity:.07;
-    -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat; -webkit-mask-size:440px auto; mask-size:440px auto; }
+    -webkit-mask:url('assets/m-pattern.png') repeat; mask:url('assets/m-pattern.png') repeat; -webkit-mask-size:440px auto; mask-size:440px auto; }
   @media (max-width:760px){ .services-watermark { opacity:.045; -webkit-mask-size:300px auto; mask-size:300px auto; } }
   .services-shell { max-width:1280px; margin:0 auto; position:relative; z-index:1; }
   .services-header { display:grid; grid-template-columns:1fr auto; align-items:end; gap:3rem; margin-bottom:4rem; padding-bottom:2rem; border-bottom:1px solid #0a246314; }
@@ -259,7 +180,7 @@
   .service-media-title.is-placeholder { color:#ffffff80; }
   .service-card-body { padding:1.6rem 1.5rem 1.5rem; display:flex; flex-direction:column; flex:1; gap:1rem; position:relative; overflow:hidden; }
   .service-card-body:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none; background:#16223f; opacity:.05;
-    -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat; -webkit-mask-size:260px auto; mask-size:260px auto; }
+    -webkit-mask:url('assets/m-pattern.png') repeat; mask:url('assets/m-pattern.png') repeat; -webkit-mask-size:260px auto; mask-size:260px auto; }
   .service-card-body > * { position:relative; z-index:1; }
   .service-desc { color:#4a5163; font-family:Barlow,sans-serif; font-size:.95rem; line-height:1.65; }
   .service-features { display:flex; flex-direction:column; gap:.4rem; margin-top:auto; padding-top:.75rem; border-top:1px dashed #0a246314; }
@@ -423,7 +344,7 @@
   #contacto { background:var(--orange); text-align:center; padding:6rem 3rem; position:relative; overflow:hidden; }
   #contacto:before { content:""; pointer-events:none; background:repeating-linear-gradient(-45deg, #0000, #0000 16px, #00000024 16px 22px); position:absolute; inset:0; z-index:0; }
   #contacto:after { content:""; background:repeating-linear-gradient(90deg, #0006 0 8px, #0000 8px 16px); height:4px; position:absolute; bottom:0; left:0; right:0; z-index:2; }
-  .cta-pattern { position:absolute; top:-20%; left:-20%; right:-20%; bottom:-20%; width:140%; height:140%; pointer-events:none; z-index:1; background-image:url("images/logo-footer.png"); background-repeat:repeat; background-size:680px auto; transform:rotate(-12deg); opacity:.95; }
+  .cta-pattern { position:absolute; top:-20%; left:-20%; right:-20%; bottom:-20%; width:140%; height:140%; pointer-events:none; z-index:1; background-image:url('assets/m-pattern.png'); background-repeat:repeat; background-size:680px auto; transform:rotate(-12deg); opacity:.95; }
   .cta-rail { background:var(--blue); width:8px; height:100%; position:absolute; top:0; z-index:3; }
   .cta-rail.l { left:0; } .cta-rail.r { right:0; }
   .cta-inner { z-index:4; max-width:700px; margin:0 auto; position:relative; }
@@ -577,7 +498,7 @@
     /* faint "M" logo watermark over the grayish-blue panel */
     .hero-content:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
                            background:#465f8a; opacity:.16;
-                           -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat;
+                           -webkit-mask:url('assets/m-pattern.png') repeat; mask:url('assets/m-pattern.png') repeat;
                            -webkit-mask-size:300px auto; mask-size:300px auto; }
     .hero-inner { position:relative; z-index:1; }
     .hero-inner { max-width:none; }
@@ -588,7 +509,7 @@
     #nosotros { display:block; background:#212d40; }
     #nosotros:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
                        background:#465f8a; opacity:.16;
-                       -webkit-mask:url("images/logo-footer.png") repeat; mask:url("images/logo-footer.png") repeat;
+                       -webkit-mask:url('assets/m-pattern.png') repeat; mask:url('assets/m-pattern.png') repeat;
                        -webkit-mask-size:300px auto; mask-size:300px auto; }
     .nosotros-bg { position:relative; inset:auto; width:100%; height:auto; margin-bottom:2.2rem;
                    border-radius:12px; overflow:hidden; border:1px solid #ffffff26;
@@ -606,28 +527,28 @@
 <div class="nav-utility">
   <div class="nav-utility-left">
     <a class="nav-util-item" href="tel:699911407">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <strong>699 91 14 07</strong>
     </a>
     <span class="nav-util-sep"></span>
     <span class="nav-util-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
       Lun–Vie · 8:00–14:00 / 16:00–20:00
     </span>
     <span class="nav-util-sep"></span>
     <span class="nav-util-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-      C. Concordia, 8 · Sangonera la Seca
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      C. Concordia, 8 - Nave 11 · Sangonera la Seca
     </span>
   </div>
   <div class="nav-utility-right">
     <span class="nav-util-item">Síguenos</span>
     <div class="nav-util-social">
       <a href="https://www.tiktok.com/@talleresmateo2.0" target="_blank" rel="noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53 1.85h3.36a5.83 5.83 0 0 0 4.7 4.7v3.36a9.13 9.13 0 0 1-4.7-1.32v7.1a6.2 6.2 0 1 1-6.2-6.2c.3 0 .58.02.87.07v3.43a2.86 2.86 0 1 0 1.96 2.7v-13.84z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53 1.85h3.36a5.83 5.83 0 0 0 4.7 4.7v3.36a9.13 9.13 0 0 1-4.7-1.32v7.1a6.2 6.2 0 1 1-6.2-6.2c.3 0 .58.02.87.07v3.43a2.86 2.86 0 1 0 1.96 2.7v-13.84z"/></svg>
       </a>
       <a href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener" aria-label="Google">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" opacity=".95"></path><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23zM5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83zM12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" opacity=".95"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23zM5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83zM12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
       </a>
     </div>
   </div>
@@ -635,7 +556,7 @@
 
 <nav id="navbar">
   <a class="nav-brand" href="#">
-    <img class="nav-logo-img" src="images/logo.png" alt="Talleres Mateo 2.0">
+    <img class="nav-logo-img" src="assets/logo-mateo-opt.png" alt="Talleres Mateo 2.0" />
   </a>
   <ul class="nav-links">
     <li><a href="#servicios">Servicios</a></li>
@@ -643,10 +564,9 @@
     <li><a href="#vehiculos">Vehículos</a></li>
     <li><a href="#opiniones">Opiniones</a></li>
     <li><a href="#contacto">Contacto</a></li>
-    <li><a href="legal.html">Legal</a></li>
   </ul>
   <a class="nav-cta" href="tel:699911407">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     Llamar ahora
   </a>
   <button aria-label="Abrir menú" class="hamburger" id="hamburger">
@@ -661,16 +581,13 @@
   <a href="#nosotros">Nosotros</a>
   <a href="#opiniones">Opiniones</a>
   <a href="#contacto">Contacto</a>
-  <a href="legal.html">Aviso Legal</a>
   <a href="tel:699911407" style="color:var(--orange)">699 91 14 07</a>
 </div>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-bg">
-    <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
-      <source src="assets/rally-mateo.mp4" type="video/mp4">
-    </video>
+    <video class="hero-video" src="assets/hero-bg.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
   </div>
@@ -685,7 +602,7 @@
       <p class="hero-subtitle">Mecánica y electricidad de alto rendimiento. Expertos en diagnosis, reparamos todo tipo de averías en vehículos diésel, gasolina, híbridos y eléctricos.</p>
       <div class="hero-buttons">
         <a class="btn-primary" href="#servicios">Ver Servicios →</a>
-        <a class="btn-secondary" href="tel:699911407">☎ Llamar ahora</a>
+        <a class="btn-secondary" href="https://wa.me/34699911407" target="_blank" rel="noopener">💬 WhatsApp</a>
       </div>
     </div>
   </div>
@@ -696,11 +613,11 @@
 <div class="orange-band">
   <div class="band-bottom"></div>
   <div class="orange-band-inner">
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
     <div class="band-rule"></div>
     <span class="band-mark">Talleres Mateo 2.0</span>
     <div class="band-rule"></div>
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
   </div>
 </div>
 
@@ -717,7 +634,7 @@
       <div class="services-header-right">
         <div class="services-count">
           <strong>04</strong>
-          <span>Servicios<br>destacados</span>
+          <span>Servicios<br/>destacados</span>
         </div>
       </div>
     </div>
@@ -726,7 +643,7 @@
 
       <article class="service-card">
         <div class="service-media">
-          <img alt="Mecánica General" class="service-img" loading="lazy" src="images/service-mecanica.jpg">
+          <img alt="Mecánica General" class="service-img" loading="lazy" src="assets/foto-mecanica-opt.jpg" />
           <div class="service-number-badge"><span class="num">01</span><span class="line"></span></div>
           <h3 class="service-media-title">Mecánica <span class="accent">General</span></h3>
         </div>
@@ -742,7 +659,7 @@
 
       <article class="service-card">
         <div class="service-media">
-          <img alt="Electro-mecánica" class="service-img" loading="lazy" src="images/service-electro.jpg">
+          <img alt="Electro-mecánica" class="service-img" loading="lazy" src="assets/svc-electromecanica.jpg" />
           <div class="service-number-badge"><span class="num">02</span><span class="line"></span></div>
           <h3 class="service-media-title">Electro-<span class="accent">Mecánica</span></h3>
         </div>
@@ -758,7 +675,7 @@
 
       <article class="service-card">
         <div class="service-media">
-          <img alt="Diagnosis" class="service-img" loading="lazy" src="images/service-diagnosis.jpg">
+          <img alt="Diagnosis" class="service-img" loading="lazy" src="assets/svc-diagnosis-min.jpg" />
           <div class="service-number-badge"><span class="num">03</span><span class="line"></span></div>
           <h3 class="service-media-title"><span class="accent">Diagnosis</span> Avanzada</h3>
         </div>
@@ -774,7 +691,7 @@
 
       <article class="service-card">
         <div class="service-media">
-          <img alt="Cajas de Cambio Automáticas" class="service-img" loading="lazy" src="images/service-cajas.jpg">
+          <img alt="Cajas de Cambio Automáticas" class="service-img" loading="lazy" src="assets/svc-cajas-cambio-min.jpg" />
           <div class="service-number-badge"><span class="num">04</span><span class="line"></span></div>
           <h3 class="service-media-title">Cajas de Cambio <span class="accent">Automáticas</span></h3>
         </div>
@@ -792,9 +709,9 @@
 
     <div class="services-cta-row">
       <p class="services-cta-eyebrow">¿Quieres ver el listado completo?</p>
-      <a class="services-cta-btn" href="Servicios Mateo.html">
+      <a class="services-cta-btn" href="servicios.html">
         <span>Ver todos los servicios</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
   </div>
@@ -804,18 +721,18 @@
 <div class="orange-band">
   <div class="band-bottom"></div>
   <div class="orange-band-inner">
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
     <div class="band-rule"></div>
     <span class="band-mark">Talleres Mateo 2.0</span>
     <div class="band-rule"></div>
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
   </div>
 </div>
 
 <!-- ============ NOSOTROS ============ -->
 <section id="nosotros">
   <div class="nosotros-bg">
-    <img src="images/nosotros-equipo.jpg" alt="Equipo Talleres Mateo 2.0">
+    <img src="assets/team-opt.jpg" alt="Equipo Talleres Mateo 2.0" />
   </div>
   <div class="nosotros-inner">
     <div class="nosotros-left">
@@ -838,34 +755,40 @@
       <div class="team-card team-card--boss">
         <div class="team-avatar team-avatar--boss">
           <span class="team-crown">👑</span>
-          <img src="images/nosotros-mateo.jpg" alt="Mateo">
+          <img src="assets/mateo-opt.jpg" alt="Mateo" />
         </div>
         <span class="team-name">Mateo</span>
         <span class="team-role">Gerente &amp; Mecánico Jefe</span>
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <div class="team-avatar"><img src="images/team-1.jpg" alt=""></div>
+          <div class="team-avatar"><img src="assets/team-1-opt.jpg" alt="" /></div>
+          <span class="team-name">Víctor</span>
           <span class="team-role">Mecánico</span>
         </div>
         <div class="team-card">
-          <div class="team-avatar"><img src="images/team-2.jpg" alt=""></div>
+          <div class="team-avatar"><img src="assets/team-2-opt.jpg" alt="" /></div>
+          <span class="team-name">Camilo</span>
           <span class="team-role">Mecánico</span>
         </div>
         <div class="team-card">
-          <div class="team-avatar"><img src="images/team-3.jpg" alt=""></div>
+          <div class="team-avatar"><img src="assets/team-3-opt.jpg" alt="" /></div>
+          <span class="team-name">Mario</span>
           <span class="team-role">Mecánico</span>
         </div>
         <div class="team-card">
-          <div class="team-avatar"><img class="frame-tight" src="images/team-4.jpg" alt=""></div>
+          <div class="team-avatar"><img class="frame-tight" src="assets/team-4-opt.jpg" alt="" /></div>
+          <span class="team-name">José Antonio</span>
           <span class="team-role">Mecánico</span>
         </div>
         <div class="team-card">
-          <div class="team-avatar"><img src="images/team-5.jpg" alt=""></div>
+          <div class="team-avatar"><img src="assets/team-5-opt.jpg" alt="" /></div>
+          <span class="team-name">Lourdes</span>
           <span class="team-role">Administrativa</span>
         </div>
         <div class="team-card">
-          <div class="team-avatar"><img src="images/team-6.jpg" alt=""></div>
+          <div class="team-avatar"><img src="assets/team-6-opt.jpg" alt="" /></div>
+          <span class="team-name">Jesús</span>
           <span class="team-role">Mecánico</span>
         </div>
       </div>
@@ -877,18 +800,18 @@
 <div class="orange-band">
   <div class="band-bottom"></div>
   <div class="orange-band-inner">
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
     <div class="band-rule"></div>
     <span class="band-mark">Talleres Mateo 2.0</span>
     <div class="band-rule"></div>
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
   </div>
 </div>
 
 <!-- ============ VEHICULOS ============ -->
 <section id="vehiculos">
   <div class="veh-bg">
-    <img src="images/competicion.jpg" alt="Coches de competición">
+    <img src="assets/vehiculos.jpg" alt="Coches de competición" />
   </div>
   <div class="veh-inner">
     <p class="section-label">Tipos de vehículo</p>
@@ -907,18 +830,18 @@
 <div class="orange-band">
   <div class="band-bottom"></div>
   <div class="orange-band-inner">
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
     <div class="band-rule"></div>
     <span class="band-mark">Talleres Mateo 2.0</span>
     <div class="band-rule"></div>
-    <img class="band-logo" src="images/logo.png" alt="">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
   </div>
 </div>
 
 <!-- ============ OPINIONES ============ -->
 <section id="opiniones">
   <div class="rev-bg">
-    <img src="images/contacto-foto.jpg" alt="">
+    <img src="assets/grafiti-opt.jpg" alt="" />
   </div>
   <div class="rev-shell">
     <div class="rev-header">
@@ -928,10 +851,10 @@
       </div>
       <div class="rev-summary">
         <svg class="rev-summary-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path>
-          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path>
-          <path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path>
-          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path>
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/>
         </svg>
         <div class="rev-summary-mid">
           <div class="rev-summary-score-row">
@@ -950,7 +873,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★★</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">Muy profesional y muy cercano el trato de Mateo. Le dije lo que me sucedió, me dijo lo que se debía hacer. Resultado perfecto, 100% recomendable.</p>
           <div class="rev-divider"></div>
@@ -958,7 +881,7 @@
             <div class="rev-avatar">JP</div>
             <div class="rev-author-meta">
               <span class="rev-name">Jean Paul Hernández</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 2 meses</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 2 meses</span>
             </div>
           </div>
         </article>
@@ -966,7 +889,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★★</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">El mejor taller que he podido encontrar en Murcia. Nadie me sacaba el fallo y ellos lo han solucionado de diez. Dando tumbos por varios talleres y al fin lo encuentran.</p>
           <div class="rev-divider"></div>
@@ -974,7 +897,7 @@
             <div class="rev-avatar">NG</div>
             <div class="rev-author-meta">
               <span class="rev-name">Noelia Gómez</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 2 meses</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 2 meses</span>
             </div>
           </div>
         </article>
@@ -982,7 +905,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★★</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">Una experiencia nueva, no conocía a Mateo y me ha sorprendido. Atención, experiencia y como ha solucionado todos los problemas de mi vehículo. De lujo.</p>
           <div class="rev-divider"></div>
@@ -990,7 +913,7 @@
             <div class="rev-avatar">PL</div>
             <div class="rev-author-meta">
               <span class="rev-name">Paco López</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 2 meses</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 2 meses</span>
             </div>
           </div>
         </article>
@@ -998,7 +921,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★★</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">Fui con un problema eléctrico que otros talleres no conseguían diagnosticar. En Talleres Mateo 2.0 lo resolvieron en el mismo día. Increíble nivel de diagnosis.</p>
           <div class="rev-divider"></div>
@@ -1006,7 +929,7 @@
             <div class="rev-avatar">MR</div>
             <div class="rev-author-meta">
               <span class="rev-name">Miguel Ruiz</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 3 meses</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 3 meses</span>
             </div>
           </div>
         </article>
@@ -1014,7 +937,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★★</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">Llevé mi híbrido con un problema de batería. Mateo me explicó todo con detalle y el precio fue muy justo. No voy a otro taller en mi vida. Totalmente recomendado.</p>
           <div class="rev-divider"></div>
@@ -1022,7 +945,7 @@
             <div class="rev-avatar">AS</div>
             <div class="rev-author-meta">
               <span class="rev-name">Ana Sánchez</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 1 mes</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 1 mes</span>
             </div>
           </div>
         </article>
@@ -1030,7 +953,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★☆</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">Trato cercano y muy profesional. El taller está muy bien equipado y se nota que saben lo que hacen. Repararon mi coche diésel rápido y sin sorpresas en la factura.</p>
           <div class="rev-divider"></div>
@@ -1038,7 +961,7 @@
             <div class="rev-avatar">JT</div>
             <div class="rev-author-meta">
               <span class="rev-name">Jorge Torres</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 1 mes</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 1 mes</span>
             </div>
           </div>
         </article>
@@ -1046,7 +969,7 @@
         <article class="rev-card">
           <div class="rev-card-head">
             <div class="rev-stars">★★★★★</div>
-            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"></path><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"></path></svg>
+            <svg class="rev-google" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
           </div>
           <p class="rev-text">Segunda vez que vengo y repito sin dudarlo. Arreglaron un problema de sensor que llevaba meses sin solución. El presupuesto fue claro desde el principio. 10/10.</p>
           <div class="rev-divider"></div>
@@ -1054,7 +977,7 @@
             <div class="rev-avatar">LM</div>
             <div class="rev-author-meta">
               <span class="rev-name">Laura Martínez</span>
-              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Hace 3 semanas</span>
+              <span class="rev-date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hace 3 semanas</span>
             </div>
           </div>
         </article>
@@ -1090,7 +1013,7 @@
       <div class="cta-contact-item">
         <span class="cta-contact-icon">📍</span>
         <span class="cta-contact-label">Dirección</span>
-        <span class="cta-contact-value" style="font-size:.9rem">C. Concordia, 8 · Murcia</span>
+        <span class="cta-contact-value" style="font-size:.9rem">C. Concordia, 8 - Nave 11 · Murcia</span>
       </div>
       <div class="cta-contact-item">
         <span class="cta-contact-icon">🕐</span>
@@ -1098,22 +1021,27 @@
         <span class="cta-contact-value" style="font-size:.9rem">Lun–Vie · 8:00–14:00 / 16:00–20:00</span>
       </div>
     </div>
-    <a class="btn-dark" href="tel:699911407">☎ Llamar ahora</a>
+    <a class="btn-dark" href="https://wa.me/34699911407" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a>
 
     <div class="cta-map-wrap">
       <div class="cta-map-head">
         <span class="cta-map-label">Dónde estamos</span>
-        <a class="cta-map-address" href="https://www.google.com/maps/search/?api=1&amp;query=Calle+Concordia+8+Sangonera+la+Seca+Murcia" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-          C. Concordia, 8 · Sangonera la Seca
+        <a class="cta-map-address" href="https://www.google.com/maps/search/?api=1&query=Calle+Concordia+8+Nave+11+Sangonera+la+Seca+Murcia" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          C. Concordia, 8 - Nave 11 · Sangonera la Seca
         </a>
       </div>
       <div class="cta-map-frame">
         <span class="cta-map-pin">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Talleres Mateo 2.0
         </span>
-        <iframe src="https://www.google.com/maps?q=Calle+Concordia+8,+Sangonera+la+Seca,+Murcia&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" title="Ubicación Talleres Mateo 2.0"></iframe>
+        <iframe
+          src="https://www.google.com/maps?q=Calle+Concordia+8+Nave+11,+Sangonera+la+Seca,+Murcia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Ubicación Talleres Mateo 2.0"></iframe>
       </div>
     </div>
   </div>
@@ -1123,21 +1051,21 @@
 <footer>
   <div class="footer-brand">
     <a class="nav-brand" href="#">
-      <img class="nav-logo-img" src="images/logo.png" alt="Talleres Mateo 2.0">
+      <img class="nav-logo-img" src="assets/logo-mateo-opt.png" alt="Talleres Mateo 2.0" />
     </a>
     <p class="footer-tagline">Mecánica y electricidad de confianza en Sangonera la Seca, Murcia. Tu vehículo en manos expertas.</p>
     <div class="footer-contact">
       <a href="tel:699911407">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         699 91 14 07
       </a>
       <a href="mailto:talleresmateo2.0.oficina@hotmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Escríbenos un email
       </a>
       <span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-        C. Concordia, 8 · Sangonera la Seca
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        C. Concordia, 8 - Nave 11 · Sangonera la Seca
       </span>
     </div>
   </div>
@@ -1148,7 +1076,7 @@
     <a href="legal.html#privacidad">Política de Privacidad</a>
     <a href="legal.html#cookies">Política de Cookies</a>
     <a href="legal.html#derechos">Ejercicio de Derechos</a>
-    <a href="#" data-cookie-settings="">Configuración de cookies</a>
+    <a href="#" data-cookie-settings>Configuración de cookies</a>
   </div>
 
   <div class="footer-col">
@@ -1162,7 +1090,7 @@
 </footer>
 
 <div class="footer-bottom">
-  <p class="footer-copy">© 2026 <span>Talleres Mateo 2.0</span> — C. Concordia, 8 · Sangonera la Seca · Murcia</p>
+  <p class="footer-copy">© 2026 <span>Talleres Mateo 2.0</span> — C. Concordia, 8 - Nave 11 · Sangonera la Seca · Murcia</p>
   <div class="footer-social">
     <a class="social-link" href="https://www.tiktok.com/@talleresmateo2.0" target="_blank" rel="noopener">TikTok</a>
     <a class="social-link" href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener">Google</a>
@@ -1293,10 +1221,103 @@
   });
 </script>
 
-<script src="js/scroll.js"></script>
+<script src="cookie-consent.js"></script>
 
+<template id="__bundler_thumbnail" data-bg-color="#000000">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#000000"/>
+    <rect y="356" width="1200" height="88" fill="#f24300"/>
+    <text x="600" y="360" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="180" fill="#ffffff" letter-spacing="6">MATEO</text>
+    <text x="600" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="64" fill="#f24300" letter-spacing="14">2.0</text>
+  </svg>
+</template>
 
+<!-- Botón flotante WhatsApp PRO -->
+<a href="https://wa.me/34699911407" target="_blank" rel="noopener" id="wa-fab" aria-label="Escríbenos por WhatsApp">
+  <span class="wa-pulse"></span>
+  <span class="wa-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.824.738 5.476 2.027 7.774L0 32l8.437-2.01A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.854l-.485-.288-5.011 1.195 1.235-4.872-.317-.5A13.24 13.24 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.273-9.961c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.199-.266.398-1.031 1.295-1.264 1.561-.233.266-.465.299-.863.1-.398-.199-1.681-.619-3.203-1.975-1.184-1.056-1.983-2.36-2.216-2.758-.233-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.199-.233.266-.398.398-.664.133-.266.066-.499-.033-.698-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.672-.897-.684l-.765-.013c-.266 0-.698.1-1.064.499-.365.398-1.395 1.362-1.395 3.323s1.428 3.854 1.627 4.12c.199.266 2.81 4.293 6.808 6.021.951.411 1.694.656 2.272.839.955.304 1.824.261 2.511.158.766-.114 2.354-.962 2.686-1.891.332-.929.332-1.727.233-1.891-.1-.166-.365-.266-.763-.465z"/></svg>
+  </span>
+  <span class="wa-label">
+    <span class="wa-label-top">¿Hablamos?</span>
+    <span class="wa-label-bottom">WhatsApp</span>
+  </span>
+</a>
+<style>
+  #wa-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px 10px 12px;
+    background: linear-gradient(135deg, #1ebe57 0%, #128C7E 100%);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 28px rgba(18,140,126,.45), 0 2px 8px rgba(0,0,0,.2);
+    transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+    overflow: visible;
+  }
+  #wa-fab:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 36px rgba(18,140,126,.55), 0 4px 12px rgba(0,0,0,.25);
+  }
+  #wa-fab:active { transform: translateY(0) scale(.97); }
 
+  .wa-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    border: 2px solid #25D366;
+    animation: wa-ring 2.4s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes wa-ring {
+    0%   { transform: scale(1);   opacity: .7; }
+    70%  { transform: scale(1.18); opacity: 0; }
+    100% { transform: scale(1.18); opacity: 0; }
+  }
 
+  .wa-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.15);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+  }
 
-</body></html>
+  .wa-label {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+  .wa-label-top {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.75);
+  }
+  .wa-label-bottom {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  @media (max-width: 480px) {
+    .wa-label { display: none; }
+    #wa-fab { padding: 11px; border-radius: 50%; }
+    .wa-icon { background: transparent; width: 28px; height: 28px; }
+  }
+</style>
+</body>
+</html>

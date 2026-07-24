@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Servicios — Talleres Mateo 2.0</title>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Satisfy&display=swap" rel="stylesheet" />
+<style>
+  *, *:before, *:after { box-sizing:border-box; margin:0; padding:0; }
+  :root {
+    --orange:#f24300; --orange-dark:#c73800; --yellow:#ffcf00;
+    --blue:#0a2463; --blue-mid:#1a3a7a; --blue-light:#e8eef8;
+    --black:#000; --black-mid:#141414; --black-card:#1a1a1a;
+    --white:#fff; --gray:#888;
+  }
+  html { scroll-behavior:smooth; }
+  body { background:#f6f6f4; color:#1a1a1a; font-family:Barlow,sans-serif; overflow-x:hidden; }
+
+  /* ============ NAV (matches landing) ============ */
+  .nav-wrap { position:fixed; top:0; left:0; right:0; z-index:100; transition:transform .35s ease; }
+  .nav-utility { background:#0a0a0a; border-bottom:1px solid #ffffff0a; padding:.35rem 3rem; display:flex; justify-content:space-between; align-items:center; gap:1.5rem; font-family:'Barlow Condensed',sans-serif; font-size:11.5px; letter-spacing:1.5px; text-transform:uppercase; color:#ffffff80; }
+  .nav-utility-left, .nav-utility-right { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+  .nav-util-item { display:inline-flex; align-items:center; gap:.45rem; text-decoration:none; color:inherit; transition:color .2s; }
+  .nav-util-item:hover { color:var(--orange); }
+  .nav-util-item svg { width:13px; height:13px; flex-shrink:0; }
+  .nav-util-item strong { color:#fff; font-weight:700; letter-spacing:1.5px; }
+  .nav-util-sep { width:1px; height:14px; background:#ffffff1a; }
+  .nav-util-social { display:flex; align-items:center; gap:.5rem; }
+  .nav-util-social a { width:24px; height:24px; border-radius:50%; background:#ffffff0d; border:1px solid #ffffff14; display:flex; align-items:center; justify-content:center; color:#ffffff99; transition:all .2s; }
+  .nav-util-social a:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+  .nav-util-social svg { width:11px; height:11px; }
+
+  nav { justify-content:space-between; align-items:center; padding:.5rem 3rem; transition:background .35s, backdrop-filter .35s, padding .25s; display:flex; background:#000000eb; backdrop-filter:blur(14px); border-bottom:1px solid #f2430040; }
+  .nav-brand { align-items:center; gap:.6rem; text-decoration:none; display:flex; }
+  .nav-logo-img { height:46px; width:auto; display:block; filter:drop-shadow(0 4px 16px #00000080); }
+  .nav-links { gap:2.2rem; list-style:none; display:flex; align-items:center; }
+  .nav-links a { letter-spacing:2.5px; text-transform:uppercase; color:#ffffffbf; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:600; text-decoration:none; transition:color .2s; position:relative; padding:.4rem 0; }
+  .nav-links a:after { content:""; background:var(--orange); transform-origin:50% 50%; height:2px; width:100%; transition:transform .3s cubic-bezier(.65,0,.35,1); position:absolute; bottom:-2px; left:0; transform:scaleX(0); }
+  .nav-links a:hover, .nav-links a.active { color:var(--white); }
+  .nav-links a:hover:after, .nav-links a.active:after { transform:scaleX(1); }
+  .nav-cta { letter-spacing:2.5px; text-transform:uppercase; background:var(--orange); color:var(--white); cursor:pointer; border:2px solid var(--orange); border-radius:3px; padding:.55rem 1.2rem; font-family:'Barlow Condensed',sans-serif; font-size:12.5px; font-weight:700; text-decoration:none; transition:background .2s, transform .15s, box-shadow .2s; display:inline-flex; align-items:center; gap:.45rem; box-shadow:0 4px 14px #f2430059; }
+  .nav-cta:hover { background:var(--orange-dark); border-color:var(--orange-dark); transform:translateY(-1px); }
+  .nav-cta svg { width:14px; height:14px; }
+  .hamburger { cursor:pointer; background:0 0; border:none; flex-direction:column; gap:5px; padding:4px; display:none; }
+  .hamburger span { background:var(--white); border-radius:1px; width:26px; height:2px; transition:all .3s; display:block; }
+  .mobile-menu { z-index:99; background:#000000f7; flex-direction:column; justify-content:center; align-items:center; gap:2rem; display:none; position:fixed; inset:0; }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { letter-spacing:4px; color:var(--white); font-family:'Bebas Neue',sans-serif; font-size:2.5rem; text-decoration:none; }
+  .mobile-close { color:var(--white); cursor:pointer; background:0 0; border:none; font-size:2rem; line-height:1; position:absolute; top:1.5rem; right:2rem; }
+
+  /* ============ PAGE HEADER ============ */
+  .page-hero { background:var(--black); color:var(--white); padding:11rem 3rem 5rem; position:relative; overflow:hidden; border-bottom:4px solid var(--orange); }
+  .page-hero-photo { position:absolute; inset:0; z-index:0; overflow:hidden; }
+  .page-hero-photo img { width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; }
+  .page-hero-photo:after { content:""; position:absolute; inset:0; background:linear-gradient(95deg, #000000cc 0%, #00000099 35%, #00000059 65%, #00000026 100%), linear-gradient(180deg, #0000 55%, #000000b3 100%); }
+  .page-hero:before { content:""; position:absolute; inset:0; z-index:1; background-image:linear-gradient(#f243000f 1px, transparent 1px), linear-gradient(90deg, #f243000f 1px, transparent 1px); background-size:60px 60px; mask-image:radial-gradient(ellipse at 30% 50%, #000 0%, transparent 70%); }
+  .page-hero:after { content:""; position:absolute; right:-10%; top:-50%; width:60%; height:200%; background:url('assets/m-pattern.png') no-repeat center/contain; opacity:.06; transform:rotate(-8deg); z-index:1; }
+  .page-hero-inner { max-width:1280px; margin:0 auto; position:relative; z-index:2; }
+  .page-crumbs { display:flex; align-items:center; gap:.5rem; color:#ffffff66; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:2.5px; text-transform:uppercase; font-weight:600; margin-bottom:2rem; }
+  .page-crumbs a { color:#ffffff66; text-decoration:none; transition:color .2s; }
+  .page-crumbs a:hover { color:var(--orange); }
+  .page-crumbs .sep { color:var(--orange); }
+  .page-crumbs .current { color:var(--white); }
+  .page-eyebrow { color:var(--orange); display:flex; align-items:center; gap:.75rem; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:5px; text-transform:uppercase; margin-bottom:1rem; }
+  .page-eyebrow:before { content:""; width:30px; height:2px; background:var(--orange); }
+  .page-title { color:var(--white); font-family:'Bebas Neue',sans-serif; font-size:clamp(3.5rem, 8vw, 6rem); line-height:.9; letter-spacing:3px; margin-bottom:1.5rem; max-width:900px; }
+  .page-title .accent { color:var(--orange); }
+  .page-lead { color:#ffffffb3; font-family:Barlow,sans-serif; font-size:1.1rem; font-weight:300; line-height:1.7; max-width:620px; }
+
+  /* ============ BAND ============ */
+  .orange-band { background:var(--orange); position:relative; overflow:hidden; }
+  .orange-band:before { content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:url('assets/m-pattern.png'), repeating-linear-gradient(-45deg, #0000 0 14px, #00000033 14px 22px);
+    background-repeat:repeat, repeat;
+    background-size:360px auto, auto;
+    opacity:.88; }
+  .orange-band:after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:linear-gradient(to right, transparent, var(--blue) 15%, var(--blue) 85%, transparent); }
+  .orange-band-inner { position:relative; z-index:1; display:grid; grid-template-columns:auto 1fr auto 1fr auto; align-items:center; gap:1.5rem; padding:14px 2.5rem; }
+  .band-logo { height:42px; width:auto; display:block; filter:drop-shadow(0 2px 4px #00000059); }
+  .band-rule { height:1px; background:linear-gradient(to right, #ffffff00, #ffffff80 50%, #ffffff00); min-width:0; }
+  .band-mark { letter-spacing:6px; text-transform:uppercase; color:#ffffffe6; white-space:nowrap; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; line-height:1; text-shadow:0 1px 2px #0000004d; padding:0 .25rem; }
+
+  /* ============ CATEGORY NAV ============ */
+  .cat-nav { background:#fff; border-bottom:1px solid #0a246314; position:sticky; top:0; z-index:50; padding:0; }
+  .cat-nav-inner { max-width:1280px; margin:0 auto; padding:0 3rem; display:flex; align-items:center; gap:.25rem; overflow-x:auto; scrollbar-width:none; }
+  .cat-nav-inner::-webkit-scrollbar { display:none; }
+  .cat-nav a { color:#0a246399; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; text-decoration:none; padding:1.1rem 1.2rem; border-bottom:3px solid transparent; transition:all .25s; white-space:nowrap; }
+  .cat-nav a:hover { color:var(--blue); border-color:#0a246333; }
+  .cat-nav a.active { color:var(--orange); border-color:var(--orange); }
+
+  /* ============ CATEGORIES ============ */
+  .cat-section { padding:5rem 3rem; position:relative; overflow:hidden; background:
+      radial-gradient(900px 520px at 8% -5%, #f2430012, transparent 60%),
+      radial-gradient(900px 600px at 100% 105%, #0a246314, transparent 60%),
+      linear-gradient(180deg, #eef1f7 0%, #f3f5f9 100%); }
+  .cat-section:before { content:""; position:absolute; inset:0; z-index:0; pointer-events:none; background:#16223f; opacity:.05;
+    -webkit-mask:url('assets/m-pattern.png') repeat; mask:url('assets/m-pattern.png') repeat; -webkit-mask-size:440px auto; mask-size:440px auto; }
+  .cat-section .cat-shell { position:relative; z-index:1; }
+  .cat-section + .cat-section { padding-top:2rem; }
+  .cat-shell { max-width:1280px; margin:0 auto; }
+  .cat-header { display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; flex-wrap:wrap; margin-bottom:1.75rem; padding-bottom:1.5rem; border-bottom:2px solid var(--blue); }
+  .cat-intro { max-width:780px; margin:0 0 2.75rem; padding-left:1.4rem; border-left:3px solid var(--orange); color:#454c61; font-family:Barlow,sans-serif; font-size:1.06rem; line-height:1.8; font-weight:300; text-wrap:pretty; }
+  .cat-intro strong { color:var(--blue); font-weight:600; }
+  .cat-intro .lead-tag { display:block; color:var(--orange); font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:.55rem; }
+  @media (max-width:760px){ .cat-intro { font-size:1rem; } }
+  .cat-header-left { display:flex; align-items:flex-end; gap:1.25rem; }
+  .cat-number { color:var(--orange); font-family:'Bebas Neue',sans-serif; font-size:5rem; line-height:.85; letter-spacing:2px; }
+  .cat-titles { display:flex; flex-direction:column; gap:.4rem; }
+  .cat-eyebrow { color:#0a246380; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; }
+  .cat-title { color:var(--blue); font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem, 4.5vw, 3.4rem); line-height:.95; letter-spacing:2px; }
+  .cat-title .accent { color:var(--orange); }
+  .cat-count { color:var(--blue); font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase; background:#0a24630d; padding:.5rem .9rem; border-radius:3px; }
+
+  .svc-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1.1rem; }
+  @media (max-width:1000px){ .svc-grid { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .svc-grid { grid-template-columns:1fr; } }
+
+  .svc-item { background:#fff; border:1px solid #0a24631a; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; position:relative; transition:transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s, border-color .35s; }
+  .svc-item:after { content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--orange); transform:scaleY(0); transform-origin:top; transition:transform .4s cubic-bezier(.22,.61,.36,1); z-index:4; }
+  .svc-item:hover { transform:translateY(-5px); box-shadow:0 18px 36px #0a246324; border-color:#0a246333; }
+  .svc-item:hover:after { transform:scaleY(1); }
+
+  .svc-thumb { position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--blue); }
+  .svc-thumb img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.92) contrast(1.04); transition:transform .65s cubic-bezier(.22,.61,.36,1), filter .35s; }
+  .svc-item:hover .svc-thumb img { transform:scale(1.06); filter:saturate(1.03) contrast(1.05); }
+  .svc-thumb:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, #0000001a 0%, #00000052 55%, #0a2463cc 100%), linear-gradient(90deg, #0a246399 0%, transparent 55%); transition:background .35s; }
+  .svc-item:hover .svc-thumb:after { background:linear-gradient(180deg, #00000026 0%, #00000066 55%, #0a2463e0 100%), linear-gradient(90deg, #0a2463b3 0%, transparent 60%); }
+  .svc-num { position:absolute; top:.7rem; left:.7rem; z-index:2; font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:1px; color:#fff; background:#000000a6; backdrop-filter:blur(4px); padding:.12rem .55rem; border-radius:2px; border-left:2px solid var(--orange); }
+
+  /* Branded placeholder thumb for services without a photo */
+  .svc-thumb.is-mono { display:flex; align-items:center; justify-content:center; background:radial-gradient(130% 130% at 50% -10%, #234387 0%, #0a2463 62%); }
+  .svc-thumb.is-mono:before { content:""; position:absolute; inset:0; background:#fff; opacity:.06; -webkit-mask:url('assets/m-pattern.png') repeat; mask:url('assets/m-pattern.png') repeat; -webkit-mask-size:190px auto; mask-size:190px auto; }
+  .svc-thumb.is-mono .mono-mark { position:relative; z-index:1; color:#fff; opacity:.9; display:flex; }
+  .svc-thumb.is-mono .mono-mark svg { width:40px; height:40px; }
+
+  .svc-body { padding:1.05rem 1.25rem 1.3rem; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+  .svc-head { display:flex; align-items:center; justify-content:space-between; gap:.6rem; }
+  .svc-name { color:var(--blue); font-family:'Bebas Neue',sans-serif; font-size:1.32rem; line-height:1.05; letter-spacing:1px; }
+  .svc-name .accent { color:var(--orange); }
+  .svc-tag { color:var(--orange); font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; flex-shrink:0; background:#f2430010; padding:.28rem .5rem; border-radius:2px; white-space:nowrap; }
+  .svc-desc { color:#5a6178; font-family:Barlow,sans-serif; font-size:.86rem; line-height:1.55; font-weight:400; }
+
+  /* ============ FILL PROMPT ============ */
+  .fill-prompt { background:#fff; border:1px dashed #f2430059; border-radius:6px; padding:1.75rem 2rem; display:flex; align-items:center; gap:1.25rem; margin-top:2.5rem; }
+  .fill-prompt-icon { width:48px; height:48px; flex-shrink:0; background:#f2430014; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--orange); }
+  .fill-prompt-icon svg { width:24px; height:24px; }
+  .fill-prompt-text { flex:1; min-width:0; }
+  .fill-prompt-title { color:var(--blue); font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:1.5px; margin-bottom:.2rem; }
+  .fill-prompt-desc { color:#5a6178; font-family:Barlow,sans-serif; font-size:.9rem; line-height:1.55; }
+
+  /* ============ CTA ============ */
+  #contacto { background:var(--orange); text-align:center; padding:6rem 3rem; position:relative; overflow:hidden; }
+  #contacto:before { content:""; pointer-events:none; background:repeating-linear-gradient(-45deg, #0000, #0000 16px, #00000024 16px 22px); position:absolute; inset:0; z-index:0; }
+  #contacto:after { content:""; background:repeating-linear-gradient(90deg, #0006 0 8px, #0000 8px 16px); height:4px; position:absolute; bottom:0; left:0; right:0; z-index:2; }
+  .cta-pattern { position:absolute; top:-20%; left:-20%; right:-20%; bottom:-20%; width:140%; height:140%; pointer-events:none; z-index:1; background-image:url('assets/m-pattern.png'); background-repeat:repeat; background-size:680px auto; transform:rotate(-12deg); opacity:.95; }
+  .cta-rail { background:var(--blue); width:8px; height:100%; position:absolute; top:0; z-index:3; }
+  .cta-rail.l { left:0; } .cta-rail.r { right:0; }
+  .cta-inner { z-index:4; max-width:700px; margin:0 auto; position:relative; }
+  .cta-label { letter-spacing:5px; text-transform:uppercase; color:#ffffffb3; margin-bottom:1rem; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; }
+  .cta-title { letter-spacing:3px; color:var(--white); margin-bottom:1.5rem; font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem, 7vw, 5.5rem); line-height:.9; }
+  .cta-subtitle { color:#fffc; margin-bottom:2.5rem; font-family:Barlow,sans-serif; font-size:1.1rem; line-height:1.6; }
+  .cta-contact-info { flex-wrap:wrap; justify-content:center; gap:2.5rem; margin-bottom:2.5rem; display:flex; }
+  .cta-contact-item { flex-direction:column; align-items:center; gap:.25rem; display:flex; }
+  .cta-contact-icon { font-size:1.4rem; }
+  .cta-contact-label { letter-spacing:3px; text-transform:uppercase; color:#fff9; font-family:'Barlow Condensed',sans-serif; font-size:10px; font-weight:700; }
+  .cta-contact-value { color:var(--white); letter-spacing:1px; font-family:'Barlow Condensed',sans-serif; font-size:1.1rem; font-weight:700; text-decoration:none; }
+  .btn-dark { letter-spacing:2.5px; text-transform:uppercase; background:var(--blue); color:var(--white); border:2px solid var(--blue); cursor:pointer; border-radius:2px; padding:1rem 2.8rem; font-family:'Barlow Condensed',sans-serif; font-size:14px; font-weight:700; text-decoration:none; transition:all .2s; display:inline-block; }
+  .btn-dark:hover { background:#08204f; transform:translateY(-2px); }
+
+  /* CTA map */
+  .cta-map-wrap { margin-top:3.5rem; max-width:920px; margin-left:auto; margin-right:auto; position:relative; }
+  .cta-map-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; flex-wrap:wrap; }
+  .cta-map-label { color:var(--white); font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:3.5px; text-transform:uppercase; display:flex; align-items:center; gap:.75rem; }
+  .cta-map-label:before { content:""; width:24px; height:2px; background:var(--blue); display:block; }
+  .cta-map-address { color:#ffffffe6; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:1.5px; text-decoration:none; transition:color .2s; display:inline-flex; align-items:center; gap:.4rem; }
+  .cta-map-address:hover { color:var(--blue); }
+  .cta-map-address svg { width:14px; height:14px; }
+  .cta-map-frame { position:relative; border-radius:4px; overflow:hidden; border:4px solid var(--blue); box-shadow:0 16px 40px #00000059, 0 0 0 1px #ffffff14; background:#0a2463; }
+  .cta-map-frame iframe { display:block; width:100%; height:360px; border:0; filter:saturate(.95) contrast(1.05); }
+  .cta-map-pin { position:absolute; top:1rem; left:1rem; z-index:2; background:var(--blue); color:#fff; padding:.45rem .85rem; border-radius:3px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; display:flex; align-items:center; gap:.45rem; box-shadow:0 4px 12px #00000080; }
+  .cta-map-pin svg { width:12px; height:12px; }
+
+  @media (max-width:640px) { .cta-map-frame iframe { height:280px; } }
+
+  /* ============ FOOTER ============ */
+  footer { background:var(--black); border-top:1px solid #ffffff12; grid-template-columns:1fr auto; align-items:start; gap:2rem; padding:3rem; display:grid; }
+  .footer-brand .nav-logo-img { height:70px; filter:none; }
+  .footer-tagline { color:#ffffff59; max-width:320px; margin-top:1rem; font-family:Barlow,sans-serif; font-size:.875rem; line-height:1.7; }
+  .footer-links { flex-direction:column; align-items:flex-end; gap:.5rem; display:flex; }
+  .footer-links a { letter-spacing:2px; text-transform:uppercase; color:#fff6; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:600; text-decoration:none; transition:color .2s; }
+  .footer-links a:hover { color:var(--orange); }
+  .footer-bottom { background:var(--black); border-top:1px solid #ffffff0d; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.5rem; padding:1rem 3rem; display:flex; }
+  .footer-copy { color:#fff3; font-family:Barlow,sans-serif; font-size:11px; }
+  .footer-copy span { color:var(--orange); }
+  .footer-social { gap:1rem; display:flex; }
+  .social-link { letter-spacing:2px; text-transform:uppercase; color:#ffffff4d; border:1px solid #ffffff1a; padding:4px 10px; font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:600; text-decoration:none; transition:all .2s; }
+  .social-link:hover { color:var(--orange); border-color:var(--orange); }
+  .footer-legal { background:var(--black); border-top:1px solid #ffffff0d; display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.6rem; padding:1.1rem 3rem .4rem; }
+  .footer-legal a { color:#ffffff73; font-family:'Barlow Condensed',sans-serif; font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; text-decoration:none; transition:color .2s; cursor:pointer; }
+  .footer-legal a:hover { color:var(--orange); }
+
+  @media (max-width:900px) {
+    .nav-utility { display:none; }
+    nav { padding:.7rem 1.2rem; }
+    .nav-links, .nav-cta { display:none; }
+    .hamburger { display:flex; }
+    .page-hero { padding:7rem 1.5rem 4rem; }
+    .cat-nav-inner { padding:0 1.5rem; }
+    .cat-section { padding:3.5rem 1.5rem; }
+    .cat-header-left { gap:.75rem; align-items:center; }
+    .cat-number { font-size:3.5rem; }
+    footer { grid-template-columns:1fr; padding:2rem 1.5rem; }
+    .footer-links { align-items:flex-start; }
+    .footer-bottom { padding:1rem 1.5rem; }
+    .footer-legal { gap:.5rem 1.1rem; justify-content:flex-start; padding:1.1rem 1.15rem .3rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap" id="navWrap">
+<div class="nav-utility">
+  <div class="nav-utility-left">
+    <a class="nav-util-item" href="tel:699911407">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <strong>699 91 14 07</strong>
+    </a>
+    <span class="nav-util-sep"></span>
+    <span class="nav-util-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Lun–Vie · 8:00–14:00 / 16:00–20:00
+    </span>
+    <span class="nav-util-sep"></span>
+    <span class="nav-util-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      C. Concordia, 8 - Nave 11 · Sangonera la Seca
+    </span>
+  </div>
+  <div class="nav-utility-right">
+    <span class="nav-util-item">Síguenos</span>
+    <div class="nav-util-social">
+      <a href="https://www.tiktok.com/@talleresmateo2.0" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.53 1.85h3.36a5.83 5.83 0 0 0 4.7 4.7v3.36a9.13 9.13 0 0 1-4.7-1.32v7.1a6.2 6.2 0 1 1-6.2-6.2c.3 0 .58.02.87.07v3.43a2.86 2.86 0 1 0 1.96 2.7v-13.84z"/></svg>
+      </a>
+      <a href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener" aria-label="Google">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" opacity=".95"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23zM5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.83zM12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.07l3.66 2.83C6.71 7.31 9.14 5.38 12 5.38z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+<nav id="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo-img" src="assets/logo-mateo-opt.png" alt="Talleres Mateo 2.0" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="index.html#nosotros">Nosotros</a></li>
+    <li><a href="index.html#vehiculos">Vehículos</a></li>
+    <li><a href="index.html#opiniones">Opiniones</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+  </ul>
+  <a class="nav-cta" href="tel:699911407">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Llamar ahora
+  </a>
+  <button aria-label="Abrir menú" class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html#servicios">Servicios</a>
+  <a href="index.html#nosotros">Nosotros</a>
+  <a href="index.html#opiniones">Opiniones</a>
+  <a href="index.html#contacto">Contacto</a>
+  <a href="tel:699911407" style="color:var(--orange)">699 91 14 07</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<header class="page-hero">
+  <div class="page-hero-photo">
+    <img src="assets/servicios-hero-min.jpg" alt="Taller Talleres Mateo 2.0 — productos y herramienta" />
+  </div>
+  <div class="page-hero-inner">
+    <div class="page-crumbs">
+      <a href="index.html">Inicio</a>
+      <span class="sep">/</span>
+      <span class="current">Servicios</span>
+    </div>
+    <p class="page-eyebrow">Catálogo completo</p>
+    <h1 class="page-title">Todos nuestros<br/><span class="accent">servicios</span></h1>
+    <p class="page-lead">21 servicios para cuidar de tu coche de principio a fin. Desde el cambio de aceite y la mecánica rápida, hasta la diagnosis avanzada y la electro-mecánica más compleja. Si no encuentras lo que buscas, llámanos — seguro que podemos ayudarte.</p>
+  </div>
+</header>
+
+<!-- ============ BAND ============ -->
+<div class="orange-band">
+  <div class="orange-band-inner">
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
+    <div class="band-rule"></div>
+    <span class="band-mark">Talleres Mateo 2.0</span>
+    <div class="band-rule"></div>
+    <img class="band-logo" src="assets/logo-mateo-opt.png" alt="" />
+  </div>
+</div>
+
+<!-- ============ CATEGORY NAV ============ -->
+<nav class="cat-nav">
+  <div class="cat-nav-inner">
+    <a href="#cat-mecanica" class="active">Mecánica</a>
+    <a href="#cat-electromecanica">Electro-mecánica</a>
+    <a href="#cat-diagnosis">Diagnosis</a>
+    <a href="#cat-otros">Otros servicios</a>
+  </div>
+</nav>
+
+<!-- ============ MECÁNICA ============ -->
+<section class="cat-section" id="cat-mecanica">
+  <div class="cat-shell">
+    <div class="cat-header">
+      <div class="cat-header-left">
+        <span class="cat-number">01</span>
+        <div class="cat-titles">
+          <span class="cat-eyebrow">Categoría</span>
+          <h2 class="cat-title">Mecánica <span class="accent">General</span></h2>
+        </div>
+      </div>
+      <span class="cat-count">10 servicios</span>
+    </div>
+
+    <p class="cat-intro"><span class="lead-tag">El núcleo del taller</span><strong>Cada sistema mecánico, atendido según el protocolo del fabricante.</strong> Desde el mantenimiento programado que adelanta la avería antes de que ocurra, hasta reparaciones de motor, distribución, embrague, frenado y tren de rodaje. Trabajamos con herramienta específica, recambios homologados y par de apriete controlado en cada montaje — porque en mecánica, la precisión no es un extra, es la base.</p>
+
+    <div class="svc-grid">
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">01</span><img src="assets/svc-mecanica-rapida-min.jpg" alt="Mecánica Rápida" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Mecánica <span class="accent">Rápida</span></h3><span class="svc-tag">Exprés</span></div>
+          <p class="svc-desc">Servicios exprés de mantenimiento y reparaciones puntuales resueltas en el día sin esperas — trabajo de precisión hecho con mimo.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">02</span><img src="assets/svc-mantenimiento.jpg" alt="Mantenimiento General" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Mantenimiento <span class="accent">General</span></h3><span class="svc-tag">Periódico</span></div>
+          <p class="svc-desc">Plan de mantenimiento periódico para mantener tu coche en perfecto estado y prolongar su vida útil.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">03</span><img src="assets/foto-cambio-aceite-min.jpg" alt="Cambio de Aceite" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Cambio de <span class="accent">Aceite</span></h3><span class="svc-tag">Mantenimiento</span></div>
+          <p class="svc-desc">Sustitución de aceite y filtros con los productos y especificaciones que marca el fabricante.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">04</span><img src="assets/svc-distribuciones.jpg" alt="Distribuciones" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Distribuciones</h3><span class="svc-tag">Motor</span></div>
+          <p class="svc-desc">Cambio de correa o cadena de distribución, tensor, rodillos y bomba de agua si procede.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">05</span><img src="assets/svc-embragues-opt.jpg" alt="Embragues" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Embragues</h3><span class="svc-tag">Transmisión</span></div>
+          <p class="svc-desc">Sustitución completa del kit de embrague, volante bimasa y bombín. Diagnóstico previo incluido.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">06</span><img src="assets/svc-cajas-cambio-min.jpg" alt="Cajas de Cambio Automáticas" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Cajas de Cambio <span class="accent">Automáticas</span></h3><span class="svc-tag">Transmisión</span></div>
+          <p class="svc-desc">Mantenimiento de cajas automáticas: cambio de aceite y filtro ATF, diagnosis y puesta a punto para una marcha suave.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">07</span><img src="assets/svc-frenos.jpg" alt="Frenos ABS" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Frenos <span class="accent">ABS</span></h3><span class="svc-tag">Seguridad</span></div>
+          <p class="svc-desc">Pastillas, discos, líquido, latiguillos y diagnóstico del sistema ABS y de frenado.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">08</span><img src="assets/svc-suspension-min.jpg" alt="Suspensión" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Suspensión</h3><span class="svc-tag">Chasis</span></div>
+          <p class="svc-desc">Amortiguadores, muelles, silentblocks y elementos de suspensión revisados al detalle.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">09</span><img src="assets/svc-direccion.jpg" alt="Dirección" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Dirección</h3><span class="svc-tag">Chasis</span></div>
+          <p class="svc-desc">Reparación y mantenimiento de dirección asistida, rótulas, bieletas y bombas hidráulicas.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">10</span><img src="assets/foto-neumaticos.jpg" alt="Neumáticos" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Neumáticos</h3><span class="svc-tag">Rodaje</span></div>
+          <p class="svc-desc">Montaje, equilibrado y venta de neumáticos de todas las marcas y medidas.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELECTRO-MECÁNICA ============ -->
+<section class="cat-section" id="cat-electromecanica">
+  <div class="cat-shell">
+    <div class="cat-header">
+      <div class="cat-header-left">
+        <span class="cat-number">02</span>
+        <div class="cat-titles">
+          <span class="cat-eyebrow">Categoría</span>
+          <h2 class="cat-title">Electro-<span class="accent">mecánica</span></h2>
+        </div>
+      </div>
+      <span class="cat-count">6 servicios</span>
+    </div>
+
+    <p class="cat-intro"><span class="lead-tag">Donde la mecánica se vuelve electrónica</span><strong>El vehículo moderno se gobierna con sensores, centralitas y redes de datos.</strong> Diagnosticar sus averías exige un conocimiento dual que dominamos: localizamos fugas de corriente, fallos de inyección, defectos de carga o problemas de climatización leyendo parámetros en tiempo real y cruzándolos con la intervención mecánica. Reparaciones complejas resueltas con método, no a base de cambiar piezas a ciegas.</p>
+
+    <div class="svc-grid">
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">01</span><img src="assets/foto-electromecanica-real-min.jpg" alt="Electro-mecánica" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Electro-<span class="accent">mecánica</span></h3><span class="svc-tag">Especialidad</span></div>
+          <p class="svc-desc">Reparaciones que combinan mecánica y electrónica — el corazón de los vehículos modernos.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">02</span><img src="assets/svc-electricidad.jpg" alt="Electricidad" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Electricidad</h3><span class="svc-tag">Eléctrico</span></div>
+          <p class="svc-desc">Reparación de averías eléctricas, cortocircuitos, fugas de corriente y cableado.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">03</span><img src="assets/svc-inyeccion-2-min.jpg" alt="Inyección" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Inyección</h3><span class="svc-tag">Combustible</span></div>
+          <p class="svc-desc">Revisión, limpieza y reparación del sistema de inyección de gasolina y diésel.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">04</span><img src="assets/foto-baterias-boost.jpg" alt="Baterías" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Baterías</h3><span class="svc-tag">Energía</span></div>
+          <p class="svc-desc">Test de carga, sustitución de baterías y revisión del alternador y motor de arranque.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">05</span><img src="assets/svc-luces.jpg" alt="Luces" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Luces</h3><span class="svc-tag">Iluminación</span></div>
+          <p class="svc-desc">Sustitución y reparación de faros, pilotos, intermitentes y luces interiores LED, halógenas o xenón.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">06</span><img src="assets/svc-aire.jpg" alt="Aire Acondicionado" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Aire <span class="accent">Acondicionado</span></h3><span class="svc-tag">Climatización</span></div>
+          <p class="svc-desc">Recarga de gas, sustitución de compresor y evaporador, detección de fugas y desinfección.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIAGNOSIS ============ -->
+<section class="cat-section" id="cat-diagnosis">
+  <div class="cat-shell">
+    <div class="cat-header">
+      <div class="cat-header-left">
+        <span class="cat-number">03</span>
+        <div class="cat-titles">
+          <span class="cat-eyebrow">Categoría</span>
+          <h2 class="cat-title"><span class="accent">Diagnosis</span> y revisión</h2>
+        </div>
+      </div>
+      <span class="cat-count">3 servicios</span>
+    </div>
+
+    <p class="cat-intro"><span class="lead-tag">Antes de reparar, entender</span><strong>Conectamos equipos OBD multimarca y bancos de medición para hablar con la electrónica de tu coche.</strong> Leemos códigos de avería, parámetros del motor y emisiones reales para entregarte un diagnóstico claro: qué falla, por qué falla y qué intervención lo resuelve. Así evitas reparaciones innecesarias y llegas a la ITV con la garantía de pasarla a la primera.</p>
+
+    <div class="svc-grid">
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">01</span><img src="assets/svc-diagnosis-min.jpg" alt="Diagnosis" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Diagnosis</h3><span class="svc-tag">Multimarca</span></div>
+          <p class="svc-desc">Diagnóstico profesional con equipos OBD de última generación. Encontramos el fallo que otros no detectan.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">02</span><img src="assets/svc-gases-escape-min.jpg" alt="Análisis Gases de Escape" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Análisis Gases de <span class="accent">Escape</span></h3><span class="svc-tag">Emisiones</span></div>
+          <p class="svc-desc">Medición y diagnóstico de emisiones para detectar fallos de combustión, catalizador o sondas lambda.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">03</span><img src="assets/foto-preitv-opt.jpg" alt="Pre-ITV" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Pre-<span class="accent">ITV</span></h3><span class="svc-tag">Revisión</span></div>
+          <p class="svc-desc">Revisión completa antes de pasar la ITV para asegurar que la pasas a la primera sin sustos.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OTROS ============ -->
+<section class="cat-section" id="cat-otros">
+  <div class="cat-shell">
+    <div class="cat-header">
+      <div class="cat-header-left">
+        <span class="cat-number">04</span>
+        <div class="cat-titles">
+          <span class="cat-eyebrow">Categoría</span>
+          <h2 class="cat-title">Otros <span class="accent">servicios</span></h2>
+        </div>
+      </div>
+      <span class="cat-count">2 servicios</span>
+    </div>
+
+    <p class="cat-intro"><span class="lead-tag">Los detalles también cuentan</span><strong>Servicios complementarios que mantienen tu vehículo a punto por dentro y por fuera.</strong> Recuperamos la visibilidad de unos faros opacos, instalamos accesorios y resolvemos esos pequeños trabajos que marcan la diferencia en el día a día — con la misma exigencia técnica que aplicamos al motor.</p>
+
+    <div class="svc-grid">
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">01</span><img src="assets/svc-pulido-faros-min.jpg" alt="Pulido de Faros" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Pulido de <span class="accent">Faros</span></h3><span class="svc-tag">Estética</span></div>
+          <p class="svc-desc">Restauración de faros amarillentos o rayados para recuperar visibilidad nocturna y estética.</p>
+        </div>
+      </article>
+      <article class="svc-item">
+        <div class="svc-thumb"><span class="svc-num">02</span><img src="assets/foto-accesorios.jpg" alt="Accesorios" loading="lazy" /></div>
+        <div class="svc-body">
+          <div class="svc-head"><h3 class="svc-name">Accesorios</h3><span class="svc-tag">Personalización</span></div>
+          <p class="svc-desc">Venta e instalación de accesorios para el vehículo: barras, soportes, electrónica añadida y mucho más.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section id="contacto">
+  <span class="cta-rail l"></span>
+  <span class="cta-rail r"></span>
+  <div class="cta-pattern"></div>
+  <div class="cta-inner">
+    <p class="cta-label">¿Tu coche necesita atención?</p>
+    <h2 class="cta-title">Pide cita<br/>hoy mismo</h2>
+    <p class="cta-subtitle">Estamos en Sangonera la Seca, listos para diagnosticar y reparar tu vehículo. Sin compromiso, presupuesto sin sorpresas.</p>
+    <div class="cta-contact-info">
+      <div class="cta-contact-item">
+        <span class="cta-contact-icon">☎</span>
+        <span class="cta-contact-label">Teléfono</span>
+        <a href="tel:699911407" class="cta-contact-value">699 91 14 07</a>
+      </div>
+      <div class="cta-contact-item">
+        <span class="cta-contact-icon">📍</span>
+        <span class="cta-contact-label">Dirección</span>
+        <span class="cta-contact-value">C. Concordia, 8 - Nave 11</span>
+      </div>
+      <div class="cta-contact-item">
+        <span class="cta-contact-icon">🕒</span>
+        <span class="cta-contact-label">Horario</span>
+        <span class="cta-contact-value">L–V · 8:00–20:00</span>
+      </div>
+    </div>
+    <a class="btn-dark" href="tel:699911407">Pedir cita ahora</a>
+
+    <div class="cta-map-wrap">
+      <div class="cta-map-head">
+        <span class="cta-map-label">Dónde estamos</span>
+        <a class="cta-map-address" href="https://www.google.com/maps/search/?api=1&query=Calle+Concordia+8+Nave+11+Sangonera+la+Seca+Murcia" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          C. Concordia, 8 - Nave 11 · Sangonera la Seca
+        </a>
+      </div>
+      <div class="cta-map-frame">
+        <span class="cta-map-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Talleres Mateo 2.0
+        </span>
+        <iframe
+          src="https://www.google.com/maps?q=Calle+Concordia+8+Nave+11,+Sangonera+la+Seca,+Murcia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Ubicación Talleres Mateo 2.0"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-brand">
+    <img class="nav-logo-img" src="assets/logo-mateo-opt.png" alt="Talleres Mateo 2.0" />
+    <p class="footer-tagline">Taller de automoción especializado en mecánica y electricidad. Expertos en diagnosis y reparaciones de todo tipo de averías.</p>
+  </div>
+  <div class="footer-links">
+    <a href="index.html#servicios">Servicios</a>
+    <a href="index.html#nosotros">Nosotros</a>
+    <a href="index.html#opiniones">Opiniones</a>
+    <a href="index.html#contacto">Contacto</a>
+  </div>
+</footer>
+<nav class="footer-legal" aria-label="Enlaces legales">
+  <a href="legal.html#aviso-legal">Aviso Legal</a>
+  <a href="legal.html#privacidad">Política de Privacidad</a>
+  <a href="legal.html#cookies">Política de Cookies</a>
+  <a href="legal.html#derechos">Ejercicio de Derechos</a>
+  <a href="#" data-cookie-settings>Configuración de cookies</a>
+</nav>
+<div class="footer-bottom">
+  <span class="footer-copy">© 2026 <span>Talleres Mateo 2.0</span> · Sangonera la Seca · Murcia</span>
+  <div class="footer-social">
+    <a class="social-link" href="https://www.tiktok.com/@talleresmateo2.0" target="_blank" rel="noopener">TikTok</a>
+    <a class="social-link" href="https://www.google.com/search?q=Talleres+Mateo+2.0" target="_blank" rel="noopener">Google</a>
+  </div>
+</div>
+
+<script>
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  hamburger?.addEventListener('click', () => mobileMenu.classList.add('open'));
+  mobileClose?.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Cat nav scrollspy
+  const sections = document.querySelectorAll('.cat-section');
+  const links = document.querySelectorAll('.cat-nav a');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY + 200;
+    let active = sections[0]?.id;
+    sections.forEach(s => { if (s.offsetTop <= y) active = s.id; });
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + active));
+  });
+</script>
+
+<script src="cookie-consent.js"></script>
+
+<template id="__bundler_thumbnail" data-bg-color="#0a2463">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0a2463"/>
+    <text x="600" y="430" font-family="Arial, sans-serif" font-weight="900" font-size="300" fill="#ffffff" text-anchor="middle">M</text>
+    <rect x="430" y="500" width="340" height="14" fill="#f24300"/>
+    <text x="600" y="600" font-family="Arial, sans-serif" font-weight="700" font-size="56" letter-spacing="8" fill="#ffffffcc" text-anchor="middle">SERVICIOS</text>
+  </svg>
+</template>
+
+<!-- Botón flotante WhatsApp PRO -->
+<a href="https://wa.me/34699911407" target="_blank" rel="noopener" id="wa-fab" aria-label="Escríbenos por WhatsApp">
+  <span class="wa-pulse"></span>
+  <span class="wa-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="#fff"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.824.738 5.476 2.027 7.774L0 32l8.437-2.01A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.854l-.485-.288-5.011 1.195 1.235-4.872-.317-.5A13.24 13.24 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.273-9.961c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.199-.266.398-1.031 1.295-1.264 1.561-.233.266-.465.299-.863.1-.398-.199-1.681-.619-3.203-1.975-1.184-1.056-1.983-2.36-2.216-2.758-.233-.398-.025-.613.175-.811.18-.178.398-.465.598-.698.199-.233.266-.398.398-.664.133-.266.066-.499-.033-.698-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.672-.897-.684l-.765-.013c-.266 0-.698.1-1.064.499-.365.398-1.395 1.362-1.395 3.323s1.428 3.854 1.627 4.12c.199.266 2.81 4.293 6.808 6.021.951.411 1.694.656 2.272.839.955.304 1.824.261 2.511.158.766-.114 2.354-.962 2.686-1.891.332-.929.332-1.727.233-1.891-.1-.166-.365-.266-.763-.465z"/></svg>
+  </span>
+  <span class="wa-label">
+    <span class="wa-label-top">¿Hablamos?</span>
+    <span class="wa-label-bottom">WhatsApp</span>
+  </span>
+</a>
+<style>
+  #wa-fab {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px 10px 12px;
+    background: linear-gradient(135deg, #1ebe57 0%, #128C7E 100%);
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 28px rgba(18,140,126,.45), 0 2px 8px rgba(0,0,0,.2);
+    transition: transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+    overflow: visible;
+  }
+  #wa-fab:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 36px rgba(18,140,126,.55), 0 4px 12px rgba(0,0,0,.25);
+  }
+  #wa-fab:active { transform: translateY(0) scale(.97); }
+  .wa-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    border: 2px solid #25D366;
+    animation: wa-ring 2.4s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes wa-ring {
+    0%   { transform: scale(1);   opacity: .7; }
+    70%  { transform: scale(1.18); opacity: 0; }
+    100% { transform: scale(1.18); opacity: 0; }
+  }
+  .wa-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.15);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .wa-label { display: flex; flex-direction: column; line-height: 1.15; }
+  .wa-label-top {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-size: 10px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase; color: rgba(255,255,255,.75);
+  }
+  .wa-label-bottom {
+    font-family: 'Barlow Condensed', 'Barlow', sans-serif;
+    font-size: 16px; font-weight: 700; letter-spacing: 1px; color: #fff;
+  }
+  @media (max-width: 480px) {
+    .wa-label { display: none; }
+    #wa-fab { padding: 11px; border-radius: 50%; }
+    .wa-icon { background: transparent; width: 28px; height: 28px; }
+  }
+</style>
+</body>
+</html>
